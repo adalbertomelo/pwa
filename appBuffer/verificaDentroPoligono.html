@@ -42,16 +42,16 @@
         <h1>Verificar Coordenada em Polígono</h1>
         <p>Insira as coordenadas do polígono e a coordenada a ser verificada.</p>
         <div>
-            <label for="coordinates">Coordenadas do Polígono (Formato: [[lon, lat], [lon, lat], ...]):</label>
-            <textarea id="coordinates" rows="4" cols="50">[[0, 0], [0, 1], [1, 1], [1, 0], [0, 0]]</textarea>
-        </div>
-        <div>
-            <label for="pointLon">Longitude do Ponto:</label>
-            <input type="number" id="pointLon" step="any">
+            <label for="coordinates">Coordenadas do Polígono (Formato: [[lat, lon], [lat, lon], ...]):</label>
+            <textarea id="coordinates" rows="4" cols="50">[[0, 0], [1, 0], [1, 1], [0, 1], [0, 0]]</textarea>
         </div>
         <div>
             <label for="pointLat">Latitude do Ponto:</label>
             <input type="number" id="pointLat" step="any">
+        </div>
+        <div>
+            <label for="pointLon">Longitude do Ponto:</label>
+            <input type="number" id="pointLon" step="any">
         </div>
         <button id="checkPoint">Verificar Ponto</button>
         <div id="output"></div>
@@ -60,17 +60,17 @@
     <script>
         document.getElementById('checkPoint').addEventListener('click', function() {
             const coordinatesInput = document.getElementById('coordinates').value;
-            const pointLon = parseFloat(document.getElementById('pointLon').value);
             const pointLat = parseFloat(document.getElementById('pointLat').value);
+            const pointLon = parseFloat(document.getElementById('pointLon').value);
 
-            if (!coordinatesInput || isNaN(pointLon) || isNaN(pointLat)) {
+            if (!coordinatesInput || isNaN(pointLat) || isNaN(pointLon)) {
                 document.getElementById('output').textContent = 'Por favor, insira valores válidos.';
                 return;
             }
 
             try {
                 const coordinates = JSON.parse(coordinatesInput);
-                const isInside = isPointInPolygon([pointLon, pointLat], coordinates);
+                const isInside = isPointInPolygon([pointLat, pointLon], coordinates);
 
                 document.getElementById('output').textContent = isInside
                     ? 'O ponto está dentro do polígono.'
@@ -81,15 +81,15 @@
         });
 
         function isPointInPolygon(point, polygon) {
-            const [x, y] = point;
+            const [lat, lon] = point;
             let inside = false;
 
             for (let i = 0, j = polygon.length - 1; i < polygon.length; j = i++) {
-                const [xi, yi] = polygon[i];
-                const [xj, yj] = polygon[j];
+                const [lat1, lon1] = polygon[i];
+                const [lat2, lon2] = polygon[j];
 
-                const intersect = ((yi > y) !== (yj > y)) &&
-                    (x < (xj - xi) * (y - yi) / (yj - yi) + xi);
+                const intersect = ((lon1 > lon) !== (lon2 > lon)) &&
+                    (lat < (lat2 - lat1) * (lon - lon1) / (lon2 - lon1) + lat1);
                 if (intersect) inside = !inside;
             }
 
