@@ -1,0 +1,39 @@
+Para exibir um ponto no google maps
+https://www.google.com/maps/@-1.3455719,-48.4064691,21z
+
+Detalhamento da url acima
+dominio do app
+https://www.google.com/maps/
+
+@latitude,longitude
+@-1.3455719,-48.4064691
+
+zoom (maximo 21, o mais próximo)
+,21z
+
+
+Para exibir uma rota ou direção
+https://www.google.com/maps/dir/-1.3442026,-48.4068307/-1.3445317,-48.4066597/-1.3452826,-48.4063201/@-1.3451367,-48.4064716,21z/
+
+
+Detalhamento da url acima
+dominio do app
+https://www.google.com/maps/dir/
+
+lista de coordenadas (latitude, longitude) separadas por /
+-1.3442026,-48.4068307/-1.3445317,-48.4066597/-1.3452826,-48.4063201/
+
+coordenada final
+@-1.3451367,-48.4064716
+
+zoom
+,21z/
+
+exemplo de poligono em coordenadas 
+[[-1.3457033153103686, -48.40689158609975],[-1.3454646645404342, -48.40642890505342],[-1.3455544937655628, -48.406381966396545],[-1.3457864408539582, -48.40684464744289]]
+
+ponto que está dentro do poligono
+-1.3456134860907105, -48.40662336520333
+
+ponto que está fora do poligono
+-1.345696611637366, -48.40655899218818
