@@ -78,10 +78,10 @@
                 return;
             }
 
-            const distance = haversine(lat1, lon1, lat2, lon2);
-            const isWithinBuffer = distance <= raio;
+            const distancia = haversine(lat1, lon1, lat2, lon2);
+            const estaDentroDoBuffer = distancia <= raio;
 
-            document.getElementById('output').textContent = isWithinBuffer
+            document.getElementById('output').textContent = estaDentroDoBuffer
                 ? `O ponto alvo está dentro do raio de ${raio} km.`
                 : `O ponto alvo está fora do raio de ${raio} km.`;
         });
