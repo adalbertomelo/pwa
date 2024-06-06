@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alarme Movimento</title>
+    <link rel="manifest" href="manifest.json">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .sensor {
+            margin-bottom: 20px;
+        }
+        .sensor label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Alarme Movimento</h1>
+    <div class="sensor" id="motion">
+        <label>Motion:</label>
+        <div id="motion-data">Waiting for data...</div>
+    </div>
+	<div class="divBotoes">
+		<input type="button" value="Ativar" onclick="ativarAlarme()">
+		<br><br><br><br><br>
+		<input type="button" value="Desligar" onclick="desligarAlarme()">
+	</div>
+</body>
+	<script src="sensors.js"></script>
+</html>
