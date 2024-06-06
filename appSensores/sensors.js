@@ -61,7 +61,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if ('DeviceMotionEvent' in window) {
         window.addEventListener('devicemotion', event => {
             document.getElementById('motion-data').innerText =
-                `Acceleration X: ${event.acceleration.x}, Y: ${event.acceleration.y}, Z: ${event.acceleration.z}`;
+                `Acceleration X: ${event.acceleration.x},`+
+				` Y: ${event.acceleration.y},`+
+				` Z: ${event.acceleration.z}`;
         });
     }
 
