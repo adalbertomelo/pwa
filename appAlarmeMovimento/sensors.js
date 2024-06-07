@@ -1,8 +1,3 @@
-if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/service-worker.js')
-        .then(() => console.log('Service Worker registered'))
-        .catch(error => console.error('Service Worker registration failed:', error));
-}
 
 alarmeAtivado = false;
 
@@ -11,7 +6,6 @@ function ativarAlarme(){
     // Motion
     if ('DeviceMotionEvent' in window) {
         window.addEventListener('devicemotion', event => {
-            if (alarmeAtivado) {
 				document.getElementById('motion-data').innerText =
 					`Acceleration X: ${event.acceleration.x},`+
 					` Y: ${event.acceleration.y},`+
@@ -23,7 +17,6 @@ function ativarAlarme(){
 					
 						alert("Moveu");
 					}
-			}; 
         });
     }
 
@@ -32,4 +25,10 @@ function ativarAlarme(){
 
 function desligarAlarme(){
 	alarmeAtivado = false;
+}
+
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js')
+        .then(() => console.log('Service Worker registered'))
+        .catch(error => console.error('Service Worker registration failed:', error));
 }
