@@ -7,9 +7,9 @@ function ativarAlarme(){
     if ('DeviceMotionEvent' in window) {
         window.addEventListener('devicemotion', event => {
 			document.getElementById('motion-data').innerText = `Acceleration X: ${event.acceleration.x}, Y: ${event.acceleration.y}, Z: ${event.acceleration.z}`;
-				if (  (event.acceleration.x > 1) 
-					||(event.acceleration.y > 1) 
-					||(event.acceleration.z > 1)){
+				if (  (event.acceleration.x > 3) 
+					||(event.acceleration.y > 3) 
+					||(event.acceleration.z > 3)){
 						alert("Moveu");
 				}
         });
