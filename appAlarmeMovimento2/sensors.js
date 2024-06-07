@@ -11,7 +11,7 @@ function ativarAlarme(){
 			var z = event.acceleration.z;
 
 			document.getElementById('motion-data').innerText = `Acceleration X: ${x}, Y: ${y}, Z: ${z}`;
-				if ( (x > 3) || (y > 3) || (z > 3)){
+				if ( (x > 2) || (y > 2) || (z > 2)){
 					alert("Moveu x:"+x+" y:"+y+ " z:"+z);
 				}
         });
