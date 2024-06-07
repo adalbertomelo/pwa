@@ -12,7 +12,7 @@ function ativarAlarme(){
 
 			document.getElementById('motion-data').innerText = `Acceleration X: ${x}, Y: ${y}, Z: ${z}`;
 				if ( (x > 3) || (y > 3) || (z > 3)){
-					alert("Moveu");
+					alert("Moveu x:"+x+" y:"+y+ " z:"+z);
 				}
         });
     }
