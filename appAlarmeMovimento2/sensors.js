@@ -6,11 +6,13 @@ function ativarAlarme(){
     // Motion
     if ('DeviceMotionEvent' in window) {
         window.addEventListener('devicemotion', event => {
-			document.getElementById('motion-data').innerText = `Acceleration X: ${event.acceleration.x}, Y: ${event.acceleration.y}, Z: ${event.acceleration.z}`;
-				if (  (event.acceleration.x > 3) 
-					||(event.acceleration.y > 3) 
-					||(event.acceleration.z > 3)){
-						alert("Moveu");
+			var x = event.acceleration.x;
+			var y = event.acceleration.y;
+			var z = event.acceleration.z;
+
+			document.getElementById('motion-data').innerText = `Acceleration X: ${x}, Y: ${y}, Z: ${z}`;
+				if ( (x > 3) || (y > 3) || (z > 3)){
+					alert("Moveu");
 				}
         });
     }
