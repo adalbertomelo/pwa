@@ -1,0 +1,15 @@
+{
+  "name": "PWA Red Block Detector",
+  "short_name": "Red Detector",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "description": "A PWA to detect and mark red blocks using the camera",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
