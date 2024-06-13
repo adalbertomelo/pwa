@@ -35,7 +35,7 @@ detectButton.addEventListener('click', () => {
 });
 
 function isRed(r, g, b) {
-  return r > 150 && g < 100 && b < 100;
+  return r > 50 && g < 50 && b < 50;
 }
 
 function markRedBlock(x, y) {
