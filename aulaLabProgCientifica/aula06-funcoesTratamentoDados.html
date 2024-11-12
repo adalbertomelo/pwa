@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aula: Funções de Tratamento de Dados em Python</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .code-box {
+            background-color: #f1f1f1;
+            border-left: 5px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-family: "Courier New", monospace;
+        }
+    </style>
+</head>
+<body class="w3-light-grey">
+
+<div class="w3-content w3-card w3-white w3-padding">
+    <h1 class="w3-text-dark-grey">Aula: Funções de Tratamento de Dados em Python</h1>
+    <h3>Objetivo da Aula</h3>
+    <ul class="w3-ul">
+        <li>Introduzir as principais funções e bibliotecas de Python usadas para tratamento de dados.</li>
+        <li>Demonstrar exemplos práticos de manipulação de dados.</li>
+    </ul>
+</div>
+
+<div class="w3-content w3-card w3-white w3-padding w3-margin-top">
+    <h3>1. Introdução</h3>
+    <p><b>O que é tratamento de dados?</b></p>
+    <p>Tratamento de dados envolve limpar, formatar, transformar e manipular dados para análise.</p>
+    <p><b>Bibliotecas principais em Python:</b></p>
+    <ul class="w3-ul">
+        <li><b>pandas:</b> Manipulação e análise de dados tabulares.</li>
+        <li><b>numpy:</b> Manipulação de arrays e operações matemáticas.</li>
+        <li><b>re:</b> Tratamento de strings com expressões regulares.</li>
+        <li><b>datetime:</b> Manipulação de datas e horários.</li>
+    </ul>
+</div>
+
+<div class="w3-content w3-card w3-white w3-padding w3-margin-top">
+    <h3>2. Importação das Bibliotecas</h3>
+    <div class="code-box">
+        import pandas as pd<br>
+        import numpy as np<br>
+        import re<br>
+        from datetime import datetime
+    </div>
+</div>
+
+<div class="w3-content w3-card w3-white w3-padding w3-margin-top">
+    <h3>3. Manipulação de Strings</h3>
+    <p><b>Remover espaços em branco:</b></p>
+    <div class="code-box">
+        string = "  exemplo de string  "<br>
+        print(string.strip())  # Remove espaços no início e no fim
+    </div>
+    <p><b>Alterar capitalização:</b></p>
+    <div class="code-box">
+        print(string.lower())  # Tudo em minúsculas<br>
+        print(string.upper())  # Tudo em maiúsculas
+    </div>
+    <p><b>Substituir partes de uma string:</b></p>
+    <div class="code-box">
+        nova_string = string.replace("exemplo", "demonstração")<br>
+        print(nova_string)
+    </div>
+    <p><b>Uso de expressões regulares (<i>re</i>):</b></p>
+    <div class="code-box">
+        texto = "Meu número é 123-456-7890"<br>
+        padrao = r"\d{3}-\d{3}-\d{4}"<br>
+        if re.search(padrao, texto):<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;print("Número de telefone encontrado!")
+    </div>
+</div>
+
+<div class="w3-content w3-card w3-white w3-padding w3-margin-top">
+    <h3>4. Tratamento de Dados Numéricos com <i>numpy</i></h3>
+    <p><b>Criar arrays:</b></p>
+    <div class="code-box">
+        array = np.array([1, 2, 3, 4, 5])<br>
+        print(array)
+    </div>
+    <p><b>Operações matemáticas:</b></p>
+    <div class="code-box">
+        print(np.mean(array))  # Média<br>
+        print(np.median(array))  # Mediana<br>
+        print(np.std(array))  # Desvio padrão
+    </div>
+</div>
+
+<div class="w3-content w3-card w3-white w3-padding w3-margin-top">
+    <h3>5. Manipulação de Datas com <i>datetime</i></h3>
+    <p><b>Criar objetos de data:</b></p>
+    <div class="code-box">
+        data = datetime(2024, 10, 31)<br>
+        print(data.strftime("%d/%m/%Y"))  # Formatar data como string
+    </div>
+    <p><b>Conversão de strings para datas:</b></p>
+    <div class="code-box">
+        data_string = "31-10-2024"<br>
+        data_objeto = datetime.strptime(data_string, "%d-%m-%Y")<br>
+        print(data_objeto)
+    </div>
+    <p><b>Diferença entre datas:</b></p>
+    <div class="code-box">
+        data1 = datetime(2024, 10, 31)<br>
+        data2 = datetime(2024, 10, 25)<br>
+        diferenca = data1 - data2<br>
+        print(diferenca.days)  # Dias de diferença
+    </div>
+</div>
+
+<div class="w3-content w3-card w3-white w3-padding w3-margin-top">
+    <h3>6. Manipulação de Dados com <i>pandas</i></h3>
+    <p><b>Criar um DataFrame:</b></p>
+    <div class="code-box">
+        dados = {"Nome": ["Ana", "Bruno", "Carlos"],<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;"Idade": [25, 30, 35],<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;"Cidade": ["Belém", "Ananindeua", "Castanhal"]}<br>
+        df = pd.DataFrame(dados)<br>
+        print(df)
+    </div>
+    <p><b>Limpar valores ausentes:</b></p>
+    <div class="code-box">
+        df["Idade"] = df["Idade"].fillna(df["Idade"].mean())  # Substituir NaN pela média
+    </div>
+    <p><b>Filtrar dados:</b></p>
+    <div class="code-box">
+        df_filtrado = df[df["Idade"] > 28]<br>
+        print(df_filtrado)
+    </div>
+    <p><b>Alterar e formatar colunas:</b></p>
+    <div class="code-box">
+        df["Idade"] = df["Idade"].apply(lambda x: x + 1)  # Incrementar todas as idades em 1<br>
+        print(df)
+    </div>
+</div>
+<div class="w3-content w3-card w3-white w3-padding w3-margin-top">
+    <h3>7. Exercícios Práticos</h3>
+    <ol class="w3-ol">
+        <li>Crie um DataFrame com informações sobre produtos, incluindo preços e datas de validade. Faça a limpeza dos dados, removendo valores nulos e corrigindo formatos de datas.</li>
+        <li>Use o <i>numpy</i> para calcular a média de um conjunto de números e aplicar operações como somar ou multiplicar cada número por um fator.</li>
+        <li>Trabalhe com strings para padronizar nomes de usuários em um formato específico.</li>
+    </ol>
+</div>
+
+<div class="w3-content w3-card w3-white w3-padding w3-margin-top">
+    <h3>Conclusão</h3>
+    <ul class="w3-ul">
+        <li>Recapitulação das funções aprendidas.</li>
+        <li>Discussão sobre a importância do tratamento adequado de dados antes da análise.</li>
+    </ul>
+</div>
+</body>
+</html>
