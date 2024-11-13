@@ -1,0 +1,24 @@
+import pandas as pd
+import numpy as np
+import re
+from datetime import datetime
+
+dados = {"produto": ["leite", "Pão", "Açucar", "Biscoito"],
+    "preco": [20.00, 10.00, 2.00, None],
+    "datavalidade": ["10/12/2024", "15/11/2024", "20/11/2024", "10/10/2024"]}
+df = pd.DataFrame(dados)
+print(df)
+
+print('após limpar valores nulos')
+df["preco"] = df["preco"].fillna(df["preco"].mean()) # Substituir NaN pela média
+print(df)
+print('')
+print('após conversão de data')
+df["datavalidade"] = pd.to_datetime(df["datavalidade"], format="%d/%m/%Y")
+print(df)
+print('')
+print('após multiplicação do preço por 1.05')
+df['precoatualizado'] = df['preco'].apply(lambda x: x * 1.05)
+print(df)
+print('média do preço')
+print(np.mean(df["preco"])) 
