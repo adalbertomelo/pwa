@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula: Linguagens de Programação Estruturadas</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body class="w3-light-grey">
+
+    <!-- Header -->
+    <header class="w3-container w3-blue w3-padding-16">
+        <h1>Aula: Linguagens de Programação Estruturadas</h1>
+        <p>Disciplina: Laboratório de Programação Científica | Curso: Ciência da Computação</p>
+    </header>
+
+    <!-- Slide 1 -->
+    <section class="w3-container w3-white w3-card w3-margin w3-padding">
+        <h2 class="w3-text-blue">Objetivo da Aula</h2>
+        <ul class="w3-ul w3-hoverable">
+            <li>Compreender os fundamentos das linguagens de programação estruturadas.</li>
+            <li>Escrever programas simples usando estruturas básicas (sequência, decisão, repetição).</li>
+            <li>Resolver problemas aplicados com exemplos práticos.</li>
+        </ul>
+    </section>
+
+    <!-- Slide 2 -->
+    <section class="w3-container w3-white w3-card w3-margin w3-padding">
+        <h2 class="w3-text-blue">O que é Programação Estruturada?</h2>
+        <p><strong>Definição:</strong> Paradigma baseado em dividir o programa em blocos ou estruturas.</p>
+        <ul class="w3-ul w3-hoverable">
+            <li>Uso de sequências, condicionais e loops.</li>
+            <li>Foco em código legível, modular e fácil de depurar.</li>
+        </ul>
+        <h3>Características principais:</h3>
+        <ol>
+            <li>Controle linear de execução.</li>
+            <li>Uso de sub-rotinas ou funções.</li>
+            <li>Modularidade.</li>
+        </ol>
+    </section>
+
+    <!-- Slide 3 -->
+    <section class="w3-container w3-white w3-card w3-margin w3-padding">
+        <h2 class="w3-text-blue">Estruturas Básicas</h2>
+        <ul class="w3-ul w3-hoverable">
+            <li><strong>Sequência:</strong> Execução de comandos em ordem.</li>
+            <li><strong>Decisão (Condicional):</strong> <code>if</code>, <code>else</code>, <code>elif</code>.</li>
+            <li><strong>Repetição (Laços):</strong> <code>for</code>, <code>while</code>.</li>
+        </ul>
+    </section>
+
+    <!-- Slide 4 -->
+    <section class="w3-container w3-white w3-card w3-margin w3-padding">
+        <h2 class="w3-text-blue">Exemplo 1 - Sequência</h2>
+        <pre class="w3-code w3-border w3-light-grey">
+# Calcular a soma de dois números
+num1 = 5
+num2 = 10
+soma = num1 + num2
+print("A soma é:", soma)
+        </pre>
+        <p><strong>Atividade:</strong> Modifique o código para calcular a média de três números.</p>
+    </section>
+
+    <!-- Slide 5 -->
+    <section class="w3-container w3-white w3-card w3-margin w3-padding">
+        <h2 class="w3-text-blue">Exemplo 2 - Decisão</h2>
+        <pre class="w3-code w3-border w3-light-grey">
+# Verificar se um número é par ou ímpar
+numero = int(input("Digite um número: "))
+if numero % 2 == 0:
+    print("O número é par.")
+else:
+    print("O número é ímpar.")
+        </pre>
+        <p><strong>Atividade:</strong> Adicione uma verificação para números negativos.</p>
+    </section>
+
+    <!-- Slide 6 -->
+    <section class="w3-container w3-white w3-card w3-margin w3-padding">
+        <h2 class="w3-text-blue">Exemplo 3 - Repetição com <code>for</code></h2>
+        <pre class="w3-code w3-border w3-light-grey">
+# Imprimir os números de 1 a 10
+for i in range(1, 11):
+    print(i)
+        </pre>
+        <p><strong>Atividade:</strong> Altere o código para imprimir os números pares entre 1 e 20.</p>
+    </section>
+
+    <!-- Slide 7 -->
+    <section class="w3-container w3-white w3-card w3-margin w3-padding">
+        <h2 class="w3-text-blue">Exemplo 4 - Repetição com <code>while</code></h2>
+        <pre class="w3-code w3-border w3-light-grey">
+# Somar números até que o usuário digite 0
+soma = 0
+while True:
+    numero = int(input("Digite um número (0 para sair): "))
+    if numero == 0:
+        break
+    soma += numero
+print("A soma total é:", soma)
+        </pre>
+        <p><strong>Atividade:</strong> Altere o código para exibir a média dos números digitados.</p>
+    </section>
+
+    <!-- Slide 8 -->
+    <section class="w3-container w3-white w3-card w3-margin w3-padding">
+        <h2 class="w3-text-blue">Modularização com Funções</h2>
+        <pre class="w3-code w3-border w3-light-grey">
+def somar(a, b):
+    return a + b
+
+num1 = 4
+num2 = 6
+print("A soma é:", somar(num1, num2))
+        </pre>
+        <p><strong>Atividade:</strong> Crie uma função para calcular o fatorial de um número.</p>
+    </section>
+
+    <!-- Slide 9 -->
+    <section class="w3-container w3-white w3-card w3-margin w3-padding">
+        <h2 class="w3-text-blue">Projeto Prático Integrado</h2>
+        <p><strong>Descrição:</strong> Desenvolver um programa que simula um caixa eletrônico.</p>
+        <ul class="w3-ul w3-hoverable">
+            <li>Exibir um menu com as opções: Saldo, Saque, Depósito e Sair.</li>
+            <li>Usuário deve conseguir realizar operações até escolher "Sair".</li>
+        </ul>
+        <p><strong>Dica:</strong> Use loops, condicionais e funções para modularizar o código.</p>
+    </section>
+
+    <!-- Slide 10 -->
+    <section class="w3-container w3-white w3-card w3-margin w3-padding">
+        <h2 class="w3-text-blue">Resumo e Conclusão</h2>
+        <p><strong>O que aprendemos hoje:</strong></p>
+        <ul class="w3-ul w3-hoverable">
+            <li>Conceitos de programação estruturada.</li>
+            <li>Estruturas básicas: Sequência, Decisão, Laços.</li>
+            <li>Modularização com funções.</li>
+            <li>Aplicação prática com projeto integrado.</li>
+        </ul>
+        <p><strong>Próximos Passos:</strong> Estudar listas e dicionários para manipulação avançada de dados.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-blue w3-padding-16 w3-center">
+        <p>Instituto Federal do Pará | Disciplina: Laboratório de Programação Científica</p>
+    </footer>
+
+</body>
+</html>
