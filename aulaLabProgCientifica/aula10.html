@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programas Envolvendo Processos de Repetição e Seleção</title>
+    <link rel="stylesheet" href="w3.css">
+    <style>
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .exercise {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .exercise h3 {
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Programas Envolvendo Processos de Repetição e Seleção</h1>
+        <p>Curso de Bacharelado em Ciência da Computação</p>
+    </div>
+
+    <div class="content">
+        <section>
+            <h2>Objetivos da Aula</h2>
+            <ul>
+                <li>Compreender os conceitos de estruturas de repetição (for, while, do-while).</li>
+                <li>Entender as estruturas de seleção (if-else, switch).</li>
+                <li>Aplicar os conceitos em problemas reais e construir programas eficientes.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Conteúdo Programático</h2>
+            <h3>Parte 1: Introdução</h3>
+            <p>Estruturas de repetição e seleção são fundamentais para a construção de programas dinâmicos e interativos. Elas permitem executar blocos de código múltiplas vezes ou tomar decisões baseadas em condições.</p>
+
+            <h3>Parte 2: Estruturas de Seleção</h3>
+            <ul>
+                <li><b>If-Else:</b> Condicional básica para bifurcação.</li>
+                <li><b>Switch:</b> Ideal para múltiplas condições.</li>
+            </ul>
+
+            <h3>Parte 3: Estruturas de Repetição</h3>
+            <ul>
+                <li><b>For:</b> Estrutura de repetição definida.</li>
+                <li><b>While:</b> Estrutura de repetição condicional.</li>
+                <li><b>Do-While:</b> Estrutura condicional que garante ao menos uma execução.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Exemplos</h2>
+            <h3>Exemplo de Estrutura de Seleção</h3>
+            <p>Programa para verificar se um número é positivo, negativo ou zero:</p>
+            <pre><code>
+int num;
+printf("Digite um número: ");
+scanf("%d", &num);
+
+if (num > 0) {
+    printf("O número é positivo\n");
+} else if (num < 0) {
+    printf("O número é negativo\n");
+} else {
+    printf("O número é zero\n");
+}
+            </code></pre>
+
+            <h3>Exemplo de Estrutura de Repetição</h3>
+            <p>Programa para calcular a soma dos números de 1 a 10 usando <code>for</code>:</p>
+            <pre><code>
+int soma = 0;
+for (int i = 1; i <= 10; i++) {
+    soma += i;
+}
+printf("A soma é: %d\n", soma);
+            </code></pre>
+        </section>
+
+        <section>
+            <h2>Exercícios Práticos</h2>
+
+            <h3>Nível Simples</h3>
+            <div class="exercise">
+                <h3>Exercício 1</h3>
+                <p>Escreva um programa que exiba todos os números de 1 a 10 usando um loop <code>for</code>.</p>
+            </div>
+            <div class="exercise">
+                <h3>Exercício 2</h3>
+                <p>Crie um programa que leia um número e exiba se ele é par ou ímpar usando <code>if-else</code>.</p>
+            </div>
+            <div class="exercise">
+                <h3>Exercício 3</h3>
+                <p>Implemente um programa que exiba "Hello World" 5 vezes usando <code>while</code>.</p>
+            </div>
+
+            <h3>Nível Intermediário</h3>
+            <div class="exercise">
+                <h3>Exercício 4</h3>
+                <p>Escreva um programa que leia um número e exiba a soma de todos os números de 1 até o número fornecido.</p>
+            </div>
+            <div class="exercise">
+                <h3>Exercício 5</h3>
+                <p>Crie um programa que leia 10 números e exiba o maior e o menor entre eles.</p>
+            </div>
+            <div class="exercise">
+                <h3>Exercício 6</h3>
+                <p>Construa um programa que exiba a tabuada de um número fornecido pelo usuário.</p>
+            </div>
+
+            <h3>Nível Avançado</h3>
+            <div class="exercise">
+                <h3>Exercício 7</h3>
+                <p>Desenvolva um programa que simule uma calculadora simples. O usuário deve informar dois números e a operação desejada (adição, subtração, multiplicação, divisão). Utilize <code>switch</code> para as operações.</p>
+            </div>
+            <div class="exercise">
+                <h3>Exercício 8</h3>
+                <p>Implemente um programa que leia 5 números e exiba apenas os números primos.</p>
+            </div>
+            <div class="exercise">
+                <h3>Exercício 9</h3>
+                <p>Escreva um programa que leia uma palavra e a exiba de trás para frente.</p>
+            </div>
+            <div class="exercise">
+                <h3>Exercício 10</h3>
+                <p>Desenvolva um programa que leia uma matriz 3x3 de números inteiros e calcule a soma dos elementos da diagonal principal.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Slides</h2>
+            <p><a href="slides.html" class="w3-button w3-green">Acessar Slides</a></p>
+        </section>
+    </div>
+</body>
+</html>
