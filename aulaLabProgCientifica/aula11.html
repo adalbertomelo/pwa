@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula: Gráficos em Python</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .code-block {
+            background-color: #f1f1f1;
+            padding: 15px;
+            font-family: monospace;
+            border-left: 5px solid #4CAF50;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body class="w3-light-grey">
+
+    <!-- Cabeçalho -->
+    <header class="w3-container w3-blue">
+        <h1 class="w3-center">Aula: Gráficos em Python</h1>
+    </header>
+
+    <!-- Seção: Introdução -->
+    <section class="w3-container w3-white w3-margin w3-padding">
+        <h2>Introdução</h2>
+        <p>Gráficos são ferramentas essenciais para a análise e visualização de dados. Python oferece várias bibliotecas poderosas para criar gráficos. Nesta aula, exploraremos as principais bibliotecas: <b>Matplotlib</b>, <b>Seaborn</b>, <b>Plotly</b> e <b>Bokeh</b>.</p>
+    </section>
+
+    <!-- Seção: Matplotlib -->
+    <section class="w3-container w3-white w3-margin w3-padding">
+        <h2>1. Matplotlib</h2>
+        <p>O <b>Matplotlib</b> é uma biblioteca básica e flexível para visualização de dados em Python.</p>
+        <h3>Tipos de gráficos suportados</h3>
+        <ul>
+            <li>Gráficos de linha</li>
+            <li>Gráficos de barra</li>
+            <li>Gráficos de dispersão</li>
+            <li>Gráficos de pizza</li>
+            <li>Histogramas</li>
+        </ul>
+
+        <h3>Exemplo: Gráfico de linha</h3>
+        <div class="code-block">
+            import matplotlib.pyplot as plt<br>
+            x = [1, 2, 3, 4, 5]<br>
+            y = [10, 20, 25, 30, 40]<br>
+            plt.plot(x, y)<br>
+            plt.title("Gráfico de Linha")<br>
+            plt.xlabel("Eixo X")<br>
+            plt.ylabel("Eixo Y")<br>
+            plt.show()
+        </div>
+
+        <h3>Exemplo: Gráfico de dispersão</h3>
+        <div class="code-block">
+            import matplotlib.pyplot as plt<br>
+            x = [5, 7, 8, 7, 2, 17, 2, 9, 4, 11]<br>
+            y = [99, 86, 87, 88, 100, 86, 103, 87, 94, 78]<br>
+            plt.scatter(x, y)<br>
+            plt.title("Gráfico de Dispersão")<br>
+            plt.show()
+        </div>
+    </section>
+
+    <!-- Seção: Seaborn -->
+    <section class="w3-container w3-white w3-margin w3-padding">
+        <h2>2. Seaborn</h2>
+        <p>O <b>Seaborn</b> fornece uma interface de alto nível para criar gráficos estatísticos atraentes.</p>
+        <h3>Tipos de gráficos suportados</h3>
+        <ul>
+            <li>Gráficos de densidade</li>
+            <li>Gráficos de violino</li>
+            <li>Gráficos de caixa</li>
+            <li>Gráficos de calor (heatmaps)</li>
+        </ul>
+
+        <h3>Exemplo: Gráfico de calor</h3>
+        <div class="code-block">
+            import seaborn as sns<br>
+            import numpy as np<br>
+            data = np.random.rand(10, 10)<br>
+            sns.heatmap(data, annot=True)<br>
+            plt.title("Gráfico de Calor")<br>
+            plt.show()
+        </div>
+    </section>
+
+    <!-- Seção: Plotly -->
+    <section class="w3-container w3-white w3-margin w3-padding">
+        <h2>3. Plotly</h2>
+        <p>O <b>Plotly</b> é uma biblioteca interativa para criar gráficos sofisticados.</p>
+        <h3>Tipos de gráficos suportados</h3>
+        <ul>
+            <li>Gráficos 3D</li>
+            <li>Gráficos de superfície</li>
+            <li>Mapas</li>
+        </ul>
+
+        <h3>Exemplo: Gráfico 3D</h3>
+        <div class="code-block">
+            import plotly.express as px<br>
+            df = px.data.iris()<br>
+            fig = px.scatter_3d(df, x='sepal_length', y='sepal_width', z='petal_length',<br>
+                                color='species')<br>
+            fig.show()
+        </div>
+    </section>
+
+    <!-- Seção: Bokeh -->
+    <section class="w3-container w3-white w3-margin w3-padding">
+        <h2>4. Bokeh</h2>
+        <p>O <b>Bokeh</b> é ideal para criar gráficos interativos em navegadores.</p>
+        <h3>Tipos de gráficos suportados</h3>
+        <ul>
+            <li>Gráficos de linhas</li>
+            <li>Gráficos de dispersão interativos</li>
+            <li>Gráficos em tempo real</li>
+        </ul>
+
+        <h3>Exemplo: Gráfico de linha</h3>
+        <div class="code-block">
+            from bokeh.plotting import figure, show<br>
+            p = figure(title="Exemplo Bokeh")<br>
+            p.line([1, 2, 3, 4], [10, 20, 25, 30])<br>
+            show(p)
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="w3-container w3-blue w3-center">
+        </footer>
+
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula: Gráficos com Plotly</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .code-block {
+            background-color: #f1f1f1;
+            padding: 15px;
+            font-family: monospace;
+            border-left: 5px solid #4CAF50;
+            white-space: pre-wrap;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body class="w3-light-grey">
+
+    <!-- Cabeçalho -->
+    <header class="w3-container w3-blue">
+        <h1 class="w3-center">Aula: Gráficos com Plotly</h1>
+    </header>
+
+    <!-- Introdução -->
+    <section class="w3-container w3-white w3-margin w3-padding">
+        <h2>Introdução</h2>
+        <p>O Plotly é uma biblioteca interativa para criação de gráficos avançados em Python. Nesta aula, exploraremos gráficos 3D, gráficos de superfície e mapas com exemplos práticos e interativos.</p>
+    </section>
+
+    <!-- Gráficos 3D -->
+    <section class="w3-container w3-white w3-margin w3-padding">
+        <h2>1. Gráficos 3D</h2>
+        <p>Gráficos 3D permitem visualizar dados em três dimensões, oferecendo uma perspectiva mais rica sobre os dados.</p>
+
+        <h3>Exemplo:</h3>
+        <div class="code-block">
+            import plotly.express as px<br>
+            import pandas as pd<br>
+            df = px.data.iris()<br>
+            fig = px.scatter_3d(df, x='sepal_length', y='sepal_width', z='petal_length',<br>
+                                color='species', size='petal_width',<br>
+                                title='Gráfico 3D - Iris Dataset')<br>
+            fig.show()
+        </div>
+    </section>
+
+    <!-- Gráficos de Superfície -->
+    <section class="w3-container w3-white w3-margin w3-padding">
+        <h2>2. Gráficos de Superfície</h2>
+        <p>Gráficos de superfície são úteis para representar funções matemáticas ou modelos de dados em 3D.</p>
+
+        <h3>Exemplo:</h3>
+        <div class="code-block">
+            import plotly.graph_objects as go<br>
+            import numpy as np<br>
+            x = np.linspace(-2, 2, 100)<br>
+            y = np.linspace(-2, 2, 100)<br>
+            x, y = np.meshgrid(x, y)<br>
+            z = np.sin(np.sqrt(x**2 + y**2))<br>
+
+            fig = go.Figure(go.Surface(z=z, x=x, y=y, colorscale='Viridis'))<br>
+            fig.update_layout(title='Gráfico de Superfície', scene=dict(zaxis=dict(range=[-1, 1])))<br>
+            fig.show()
+        </div>
+    </section>
+
+    <!-- Mapas -->
+    <section class="w3-container w3-white w3-margin w3-padding">
+        <h2>3. Mapas</h2>
+        <p>Mapas em Plotly são úteis para representar dados geoespaciais de maneira interativa.</p>
+
+        <h3>Exemplo:</h3>
+        <div class="code-block">
+            import plotly.express as px<br>
+            df = px.data.gapminder()<br>
+            fig = px.choropleth(df, locations="iso_alpha", color="lifeExp",<br>
+                                hover_name="country", animation_frame="year",<br>
+                                title="Expectativa de Vida Global")<br>
+            fig.show()
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="w3-container w3-blue w3-center">
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula: Gráficos com Matplotlib</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .code-block {
+            background-color: #f1f1f1;
+            padding: 15px;
+            font-family: monospace;
+            border-left: 5px solid #4CAF50;
+            white-space: pre-wrap;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body class="w3-light-grey">
+
+    <!-- Cabeçalho -->
+    <header class="w3-container w3-blue">
+        <h1 class="w3-center">Aula: Gráficos com Matplotlib</h1>
+    </header>
+
+    <!-- Introdução -->
+    <section class="w3-container w3-white w3-margin w3-padding">
+        <h2>Introdução</h2>
+        <p>O Matplotlib é uma biblioteca essencial para criar visualizações de dados em Python. Nesta aula, exploraremos os principais tipos de gráficos suportados pela biblioteca com exemplos práticos.</p>
+    </section>
+
+    <!-- Gráficos de Linha -->
+    <section class="w3-container w3-white w3-margin w3-padding">
+        <h2>1. Gráficos de Linha</h2>
+        <p>Os gráficos de linha são usados para mostrar tendências ao longo do tempo ou relações contínuas entre dados.</p>
+
+        <h3>Exemplo:</h3>
+        <div class="code-block">
+            import matplotlib.pyplot as plt<br>
+            x = [1, 2, 3, 4, 5]<br>
+            y = [2, 3, 5, 7, 11]<br>
+            plt.plot(x, y, marker='o')<br>
+            plt.title("Gráfico de Linha")<br>
+            plt.xlabel("Eixo X")<br>
+            plt.ylabel("Eixo Y")<br>
+            plt.grid(True)<br>
+            plt.show()
+        </div>
+    </section>
+
+    <!-- Gráficos de Barra -->
+    <section class="w3-container w3-white w3-margin w3-padding">
+        <h2>2. Gráficos de Barra</h2>
+        <p>Gráficos de barra são usados para comparar categorias ou grupos de dados.</p>
+
+        <h3>Exemplo:</h3>
+        <div class="code-block">
+            import matplotlib.pyplot as plt<br>
+            categorias = ['A', 'B', 'C', 'D']<br>
+            valores = [5, 7, 3, 8]<br>
+            plt.bar(categorias, valores, color='skyblue')<br>
+            plt.title("Gráfico de Barra")<br>
+            plt.xlabel("Categorias")<br>
+            plt.ylabel("Valores")<br>
+            plt.show()
+        </div>
+    </section>
+
+    <!-- Gráficos de Dispersão -->
+    <section class="w3-container w3-white w3-margin w3-padding">
+        <h2>3. Gráficos de Dispersão</h2>
+        <p>Gráficos de dispersão são usados para observar relações ou padrões entre duas variáveis.</p>
+
+        <h3>Exemplo:</h3>
+        <div class="code-block">
+            import matplotlib.pyplot as plt<br>
+            x = [5, 7, 8, 7, 2, 17, 2, 9, 4, 11]<br>
+            y = [99, 86, 87, 88, 100, 86, 103, 87, 94, 78]<br>
+            plt.scatter(x, y, color='red')<br>
+            plt.title("Gráfico de Dispersão")<br>
+            plt.xlabel("X")<br>
+            plt.ylabel("Y")<br>
+            plt.show()
+        </div>
+    </section>
+
+    <!-- Gráficos de Pizza -->
+    <section class="w3-container w3-white w3-margin w3-padding">
+        <h2>4. Gráficos de Pizza</h2>
+        <p>Gráficos de pizza são usados para mostrar proporções ou partes de um todo.</p>
+
+        <h3>Exemplo:</h3>
+        <div class="code-block">
+            import matplotlib.pyplot as plt<br>
+            labels = ['A', 'B', 'C', 'D']<br>
+            sizes = [30, 45, 15, 10]<br>
+            plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=140)<br>
+            plt.title("Gráfico de Pizza")<br>
+            plt.axis('equal')  # Para manter o círculo perfeito<br>
+            plt.show()
+        </div>
+    </section>
+
+    <!-- Histogramas -->
+    <section class="w3-container w3-white w3-margin w3-padding">
+        <h2>5. Histogramas</h2>
+        <p>Histogramas são usados para visualizar a distribuição de dados.</p>
+
+        <h3>Exemplo:</h3>
+        <div class="code-block">
+            import matplotlib.pyplot as plt<br>
+            import numpy as np<br>
+            data = np.random.randn(1000)<br>
+            plt.hist(data, bins=20, color='purple', alpha=0.7)<br>
+            plt.title("Histograma")<br>
+            plt.xlabel("Valores")<br>
+            plt.ylabel("Frequência")<br>
+            plt.show()
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="w3-container w3-blue w3-center">
+        
+    </footer>
+
+</body>
+</html>

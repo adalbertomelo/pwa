@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula: Gráficos com Seaborn</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .code-block {
+            background-color: #f1f1f1;
+            padding: 15px;
+            font-family: monospace;
+            border-left: 5px solid #4CAF50;
+            white-space: pre-wrap;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body class="w3-light-grey">
+
+    <!-- Cabeçalho -->
+    <header class="w3-container w3-blue">
+        <h1 class="w3-center">Aula: Gráficos com Seaborn</h1>
+    </header>
+
+    <!-- Introdução -->
+    <section class="w3-container w3-white w3-margin w3-padding">
+        <h2>Introdução</h2>
+        <p>O Seaborn é uma biblioteca poderosa para criar gráficos estatísticos e visualizações atraentes em Python. Nesta aula, exploraremos gráficos de densidade, violino, caixa e calor (heatmaps) com exemplos práticos.</p>
+    </section>
+
+    <!-- Gráficos de Densidade -->
+    <section class="w3-container w3-white w3-margin w3-padding">
+        <h2>1. Gráficos de Densidade</h2>
+        <p>Os gráficos de densidade são usados para representar a distribuição de dados de maneira suave.</p>
+
+        <h3>Exemplo:</h3>
+        <div class="code-block">
+            import seaborn as sns<br>
+            import matplotlib.pyplot as plt<br>
+            import numpy as np<br>
+            data = np.random.randn(1000)<br>
+            sns.kdeplot(data, shade=True, color="blue")<br>
+            plt.title("Gráfico de Densidade")<br>
+            plt.show()
+        </div>
+    </section>
+
+    <!-- Gráficos de Violino -->
+    <section class="w3-container w3-white w3-margin w3-padding">
+        <h2>2. Gráficos de Violino</h2>
+        <p>Os gráficos de violino mostram a distribuição dos dados juntamente com sua densidade.</p>
+
+        <h3>Exemplo:</h3>
+        <div class="code-block">
+            import seaborn as sns<br>
+            import matplotlib.pyplot as plt<br>
+            import pandas as pd<br>
+            data = sns.load_dataset("tips")<br>
+            sns.violinplot(x="day", y="total_bill", data=data, palette="muted")<br>
+            plt.title("Gráfico de Violino")<br>
+            plt.show()
+        </div>
+    </section>
+
+    <!-- Gráficos de Caixa -->
+    <section class="w3-container w3-white w3-margin w3-padding">
+        <h2>3. Gráficos de Caixa</h2>
+        <p>Os gráficos de caixa mostram os quartis, a mediana e os outliers de um conjunto de dados.</p>
+
+        <h3>Exemplo:</h3>
+        <div class="code-block">
+            import seaborn as sns<br>
+            import matplotlib.pyplot as plt<br>
+            import pandas as pd<br>
+            data = sns.load_dataset("tips")<br>
+            sns.boxplot(x="day", y="total_bill", data=data, palette="coolwarm")<br>
+            plt.title("Gráfico de Caixa")<br>
+            plt.show()
+        </div>
+    </section>
+
+    <!-- Gráficos de Calor (Heatmaps) -->
+    <section class="w3-container w3-white w3-margin w3-padding">
+        <h2>4. Gráficos de Calor (Heatmaps)</h2>
+        <p>Os heatmaps são usados para visualizar a correlação ou concentração de valores em uma matriz de dados.</p>
+
+        <h3>Exemplo:</h3>
+        <div class="code-block">
+            import seaborn as sns<br>
+            import matplotlib.pyplot as plt<br>
+            import numpy as np<br>
+            data = np.random.rand(10, 10)<br>
+            sns.heatmap(data, annot=True, cmap="YlGnBu")<br>
+            plt.title("Gráfico de Calor")<br>
+            plt.show()
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="w3-container w3-blue w3-center">
+    </footer>
+
+</body>
+</html>
