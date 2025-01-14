@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Problemas com Variáveis Estruturadas</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+    <div class="w3-container w3-light-grey w3-padding-32">
+        <div class="w3-card-4 w3-white w3-padding">
+            <h2 class="w3-center w3-text-teal">Problemas Envolvendo Variáveis Estruturadas Unidimensionais Homogêneas</h2>
+            <p>Problemas envolvendo variáveis estruturadas unidimensionais homogêneas estão relacionados ao uso de <strong>vetores (arrays)</strong>, que são estruturas de dados que armazenam múltiplos elementos do mesmo tipo em posições contíguas da memória. Abaixo, seguem explicações e exemplos comuns sobre o tema.</p>
+
+            <h3 class="w3-text-teal">Conceito de Variáveis Estruturadas Unidimensionais Homogêneas</h3>
+            <ul class="w3-ul w3-border">
+                <li><strong>Unidimensionais:</strong> São organizadas linearmente, como uma única linha de dados.</li>
+                <li><strong>Homogêneas:</strong> Contêm elementos do mesmo tipo (ex.: apenas inteiros, apenas caracteres, etc.).</li>
+                <li><strong>Índices:</strong> Cada elemento no vetor é acessado por um índice, que geralmente começa em 0.</li>
+            </ul>
+
+            <h3 class="w3-text-teal">Tipos de Problemas</h3>
+            <ul class="w3-ul w3-border">
+                <li><strong>Inserção e Acesso:</strong> Localizar ou inserir valores específicos no vetor.</li>
+                <ul class="w3-ul w3-margin-left">
+                    <li><strong>Exemplo:</strong> Criar um vetor de 10 números inteiros e preencher com valores inseridos pelo usuário.</li>
+                </ul>
+                <li><strong>Busca:</strong> Procurar elementos dentro do vetor.
+                    <ul>
+                        <li><strong>Busca linear:</strong> Verifica cada elemento até encontrar o desejado.</li>
+                        <li><strong>Busca binária:</strong> Utilizada em vetores ordenados para localizar o elemento mais rapidamente.</li>
+                    </ul>
+                </li>
+                <li><strong>Ordenação:</strong> Organizar os elementos do vetor em ordem crescente ou decrescente.
+                    <ul>
+                        <li>Algoritmos comuns: Bubble Sort, Insertion Sort, Quick Sort.</li>
+                    </ul>
+                </li>
+                <li><strong>Cálculos Estatísticos:</strong>
+                    <ul>
+                        <li>Determinar a soma, média, maior ou menor valor, etc.</li>
+                        <li><strong>Exemplo:</strong> Calcular a média de notas armazenadas em um vetor.</li>
+                    </ul>
+                </li>
+                <li><strong>Manipulação de Dados:</strong>
+                    <ul>
+                        <li>Remoção, substituição ou reorganização de elementos.</li>
+                        <li><strong>Exemplo:</strong> Remover todos os números negativos de um vetor.</li>
+                    </ul>
+                </li>
+                <li><strong>Problemas de Conjunto:</strong>
+                    <ul>
+                        <li>Trabalhar com uniões, interseções e diferenças entre vetores.</li>
+                        <li><strong>Exemplo:</strong> Determinar os elementos comuns entre dois vetores.</li>
+                    </ul>
+                </li>
+                <li><strong>Rotação e Reversão:</strong>
+                    <ul>
+                        <li>Girar os elementos do vetor (ex.: deslocar para a esquerda ou direita).</li>
+                        <li>Inverter a ordem dos elementos.</li>
+                    </ul>
+                </li>
+                <li><strong>Cálculos Específicos:</strong>
+                    <ul>
+                        <li>Problemas que exigem lógica específica para um conjunto de dados armazenado em um vetor.</li>
+                        <li><strong>Exemplo:</strong> Determinar se os elementos do vetor estão em ordem crescente.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3 class="w3-text-teal">Exemplo Prático</h3>
+            <p><strong>Problema:</strong> Calcular a média de um vetor de notas e identificar os alunos que ficaram acima da média.</p>
+            <pre class="w3-pale-green w3-border w3-padding">
+<code># Vetor de notas
+notas = [7.5, 8.0, 6.0, 9.0, 5.5]
+
+# Calculando a média
+media = sum(notas) / len(notas)
+
+# Identificando alunos acima da média
+acima_da_media = [nota for nota in notas if nota > media]
+
+print(f"Média da turma: {media}")
+print(f"Notas acima da média: {acima_da_media}")</code>
+            </pre>
+
+            <h3 class="w3-text-teal">Dificuldades Comuns</h3>
+            <ul class="w3-ul w3-border">
+                <li><strong>Erros de índice:</strong> Acessar posições fora do intervalo válido do vetor.</li>
+                <li><strong>Gerenciamento de memória:</strong> Em linguagens de baixo nível como C, pode ser necessário alocar/desalocar memória.</li>
+                <li><strong>Eficiência:</strong> Operações como ordenação ou busca podem ser custosas em vetores grandes.</li>
+            </ul>
+
+
+            <h3 class="w3-text-teal">Atividades Práticas</h3>
+            <ol class="w3-ul w3-border">
+                <li>
+                    <strong>Inserção e Acesso:</strong>
+                    <p>Crie um programa que permita ao usuário inserir 10 números inteiros em um vetor e, em seguida, mostre todos os números armazenados.</p>
+                </li>
+                <li>
+                    <strong>Busca:</strong>
+                    <p>Crie um vetor de 20 números inteiros aleatórios. Permita ao usuário pesquisar por um número e informe se ele foi encontrado e sua posição no vetor.</p>
+                </li>
+                <li>
+                    <strong>Ordenação:</strong>
+                    <p>Crie um vetor de 15 números inteiros aleatórios e ordene-os em ordem crescente usando o algoritmo Bubble Sort.</p>
+                </li>
+                <li>
+                    <strong>Cálculos Estatísticos:</strong>
+                    <p>Peça ao usuário para inserir as notas de 5 alunos e calcule a média da turma, mostrando também a maior e a menor nota.</p>
+                </li>
+                <li>
+                    <strong>Manipulação de Dados:</strong>
+                    <p>Crie um programa que remova todos os números negativos de um vetor de 10 números inteiros fornecidos pelo usuário.</p>
+                </li>
+                <li>
+                    <strong>Problemas de Conjunto:</strong>
+                    <p>Crie dois vetores com números inteiros. Mostre os elementos que estão presentes em ambos os vetores (interseção).</p>
+                </li>
+                <li>
+                    <strong>Rotação e Reversão:</strong>
+                    <p>Crie um vetor de 10 números e implemente uma função para deslocar os elementos para a direita. Mostre o vetor antes e depois da rotação.</p>
+                </li>
+                <li>
+                    <strong>Cálculos Específicos:</strong>
+                    <p>Crie um programa que leia um vetor de números inteiros e verifique se eles estão em ordem crescente.</p>
+                </li>
+            </ol>
+			
+            <p>Esses problemas geralmente são o ponto de partida para aprender sobre estruturas de dados mais avançadas, como matrizes (bidimensionais), listas ligadas e árvores.</p>
+        </div>
+    </div>
+</body>
+</html>
