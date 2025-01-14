@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aula 01 - Slide 4</title>
+    <meta charset="UTF-8">
+    <!-- Importa o w3.css para estilos -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .topic-header {
+            cursor: pointer;
+            user-select: none;
+        }
+        .topic-content {
+            display: none;
+            margin-left: 20px;
+        }
+        /* Estilo opcional para indicar que o item é clicável */
+        .topic-header:hover {
+            color: #1e90ff;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navegação entre Slides no topo -->
+<div class="w3-center w3-margin-top">
+    <a href="aula01-topico-3.html" class="w3-button w3-blue w3-round">&#10094; Anterior</a>
+    <a href="aula01-topico-45.html" class="w3-button w3-blue w3-round">Próximo &#10095;</a>
+</div>
+
+<div class="w3-container">
+    <h3 class="w3-text-green">1.2. Componentes de Software</h3>
+    <ul class="w3-ul w3-leftbar w3-border-green">
+        <li>
+            <strong class="topic-header">Software de Sistema</strong>
+            <div class="topic-content">
+                <p>
+                    O software de sistema serve como uma camada intermediária entre o hardware e os aplicativos do usuário. Ele inclui o sistema operacional, que gerencia os recursos do computador e fornece serviços para programas de aplicação. Exemplos de sistemas operacionais são Windows, macOS, Linux e Unix. Além disso, drivers de dispositivo são softwares especializados que permitem que o sistema operacional se comunique com hardware específico, como placas gráficas, impressoras e outros periféricos. Sem o software de sistema, os programas de aplicação não poderiam funcionar adequadamente, pois não teriam acesso aos recursos de hardware.
+                </p>
+                <p><strong>Exemplo Prático:</strong> O sistema operacional Windows fornece uma interface gráfica para o usuário, gerenciamento de arquivos, segurança e suporte a uma ampla gama de softwares de aplicação. Drivers de dispositivo permitem que o Windows utilize diferentes modelos de impressoras sem que o usuário precise interagir com detalhes técnicos.</p>
+            </div>
+        </li>
+        <li>
+            <strong class="topic-header">Software de Aplicação</strong>
+            <div class="topic-content">
+                <p>
+                    O software de aplicação consiste em programas que executam tarefas específicas para o usuário final. Esses programas são desenvolvidos para ajudar o usuário a realizar atividades produtivas ou de entretenimento. Exemplos incluem processadores de texto (como Microsoft Word), planilhas eletrônicas (como Excel), navegadores web (como Chrome, Firefox), editores de imagem (como Photoshop) e jogos. O software de aplicação utiliza os serviços fornecidos pelo software de sistema para interagir com o hardware do computador.
+                </p>
+                <p><strong>Exemplo Prático:</strong> Um designer gráfico pode utilizar o Adobe Photoshop para criar e editar imagens. O Photoshop depende do sistema operacional para acessar recursos como memória, armazenamento e GPU para processamento gráfico.</p>
+            </div>
+        </li>
+        <li>
+            <strong class="topic-header">Firmware</strong>
+            <div class="topic-content">
+                <p>
+                    Firmware é um tipo de software que está embutido em dispositivos de hardware para controlar suas funções básicas. Ele é armazenado em memória não volátil, como ROM, EEPROM ou flash, permitindo que o dispositivo retenha o software mesmo sem alimentação elétrica. O firmware fornece instruções de baixo nível para o hardware, tornando possível que o dispositivo funcione conforme projetado. Exemplos de firmware incluem o BIOS/UEFI em computadores, que inicializa o hardware durante o processo de boot e carrega o sistema operacional, e firmware em dispositivos como roteadores, smartphones, câmeras digitais e outros eletrônicos. Atualizações de firmware podem corrigir bugs ou adicionar novas funcionalidades aos dispositivos.
+                </p>
+                <p><strong>Exemplo Prático:</strong> O firmware do roteador Wi-Fi controla as funções de rede, segurança e acesso à internet. Atualizar o firmware do roteador pode melhorar o desempenho da rede e adicionar recursos como controle parental ou suporte a novos padrões de segurança.</p>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!-- Script para expandir/ocultar conteúdo -->
+<script>
+    // Seleciona todos os elementos com a classe 'topic-header'
+    var headers = document.getElementsByClassName('topic-header');
+
+    for (var i = 0; i < headers.length; i++) {
+        headers[i].addEventListener('click', function() {
+            // Encontra o próximo elemento irmão (sibling), que é o 'topic-content'
+            var content = this.nextElementSibling;
+            // Alterna a exibição do conteúdo
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+            } else {
+                content.style.display = 'block';
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

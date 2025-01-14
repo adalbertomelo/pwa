@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aula 01 - Slide 6</title>
+    <meta charset="UTF-8">
+    <!-- Importa o w3.css para estilos -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .topic-header {
+            cursor: pointer;
+            user-select: none;
+        }
+        .topic-content {
+            display: none;
+            margin-left: 20px;
+        }
+        /* Estilo opcional para indicar que o item é clicável */
+        .topic-header:hover {
+            color: #1e90ff;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navegação entre Slides no topo -->
+<div class="w3-center w3-margin-top">
+    <a href="aula01-topico-5.html" class="w3-button w3-blue w3-round">&#10094; Anterior</a>
+    <a href="aula01-topico-7.html" class="w3-button w3-blue w3-round">Próximo &#10095;</a>
+</div>
+
+<div class="w3-container">
+    <h3 class="w3-text-orange">2.2. Tipos de Sistemas Operacionais</h3>
+    <ul class="w3-ul w3-leftbar w3-border-orange">
+        <li>
+            <strong class="topic-header">Monotarefa vs. Multitarefa</strong>
+            <div class="topic-content">
+                <p>
+                    <strong>Monotarefa</strong>: Sistemas operacionais monotarefa suportam a execução de um único processo por vez. Isso significa que, enquanto um programa está em execução, nenhum outro pode ser iniciado. Este tipo de sistema foi comum nos primeiros computadores pessoais e dispositivos embarcados simples.
+                </p>
+                <p>
+                    <strong>Multitarefa</strong>: Sistemas multitarefa permitem que múltiplos processos sejam executados simultaneamente. O sistema operacional gerencia o tempo de CPU entre os processos, alternando rapidamente entre eles, o que dá a impressão de que todos estão sendo executados ao mesmo tempo. A multitarefa pode ser:
+                </p>
+                <ul>
+                    <li><strong>Cooperativa</strong>: Onde os processos voluntariamente cedem o controle da CPU.</li>
+                    <li><strong>Preemptiva</strong>: Onde o sistema operacional força a alternância de processos com base em interrupções de tempo.</li>
+                </ul>
+                <p>
+                    A multitarefa melhora a eficiência do sistema e a experiência do usuário, permitindo a execução de várias aplicações simultaneamente.
+                </p>
+                <p><strong>Exemplo Prático:</strong> Em um sistema multitarefa, você pode estar escrevendo um documento enquanto escuta música e baixa arquivos da internet, com o sistema operacional gerenciando todos esses processos.</p>
+            </div>
+        </li>
+        <li>
+            <strong class="topic-header">Monousuário vs. Multiusuário</strong>
+            <div class="topic-content">
+                <p>
+                    <strong>Monousuário</strong>: Sistemas operacionais monousuário suportam apenas um usuário por vez. Todos os recursos do sistema estão disponíveis para esse único usuário. Exemplos incluem sistemas operacionais em computadores pessoais antigos ou dispositivos móveis.
+                </p>
+                <p>
+                    <strong>Multiusuário</strong>: Sistemas multiusuário permitem que múltiplos usuários acessem os recursos do sistema simultaneamente. Isso é comum em servidores e mainframes, onde vários usuários podem se conectar via rede ou terminais. O sistema operacional gerencia os recursos para garantir isolamento, segurança e divisão justa entre os usuários. Implementa políticas de acesso, autenticação e autorização.
+                </p>
+                <p><strong>Exemplo Prático:</strong> Em um servidor de rede, vários usuários podem acessar e modificar arquivos compartilhados ao mesmo tempo, com o sistema operacional garantindo que as ações de um usuário não interfiram nas de outro.</p>
+            </div>
+        </li>
+        <li>
+            <strong class="topic-header">Sistemas em Tempo Real</strong>
+            <div class="topic-content">
+                <p>
+                    Sistemas operacionais em tempo real (<strong>RTOS</strong>) são projetados para atender a requisitos de tempo críticos, onde a precisão temporal é tão importante quanto a correção lógica das operações. Eles são usados em aplicações como controle industrial, sistemas embarcados, equipamentos médicos e automação.
+                </p>
+                <p>
+                    Tipos de Sistemas em Tempo Real:
+                </p>
+                <ul>
+                    <li><strong>Tempo Real Rígido (Hard Real-Time)</strong>: Os deadlines devem ser estritamente cumpridos. A falha em atender um deadline pode levar a consequências graves, como danos físicos ou riscos à vida.</li>
+                    <li><strong>Tempo Real Flexível (Soft Real-Time)</strong>: Os deadlines são importantes, mas não críticos. Perder um deadline pode degradar o desempenho, mas não resulta em falha catastrófica.</li>
+                </ul>
+                <p>
+                    Características dos sistemas em tempo real incluem:
+                </p>
+                <ul>
+                    <li><strong>Determinismo</strong>: Respostas previsíveis e consistentes a eventos.</li>
+                    <li><strong>Prioridade</strong>: Tarefas com maior prioridade podem preemptar tarefas de menor prioridade.</li>
+                    <li><strong>Mínima Latência</strong>: Tempos de resposta rápidos e garantidos.</li>
+                </ul>
+                <p>
+                    O RTOS gerencia recursos para garantir que tarefas críticas recebam a atenção necessária dentro dos prazos estabelecidos.
+                </p>
+                <p><strong>Exemplo Prático:</strong> Em um sistema de controle de airbags em um automóvel, o sistema operacional em tempo real deve responder imediatamente a um impacto para inflar os airbags no momento certo.</p>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!-- Script para expandir/ocultar conteúdo -->
+<script>
+    // Seleciona todos os elementos com a classe 'topic-header'
+    var headers = document.getElementsByClassName('topic-header');
+
+    for (var i = 0; i < headers.length; i++) {
+        headers[i].addEventListener('click', function() {
+            // Encontra o próximo elemento irmão, que é o 'topic-content'
+            var content = this.nextElementSibling;
+            // Alterna a exibição do conteúdo
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+            } else {
+                content.style.display = 'block';
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

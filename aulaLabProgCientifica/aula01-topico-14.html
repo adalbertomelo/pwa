@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aula 01 - Slide 14</title>
+    <meta charset="UTF-8">
+    <!-- Importa o w3.css para estilos -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .topic-header {
+            cursor: pointer;
+            user-select: none;
+        }
+        .topic-content {
+            display: none;
+            margin-left: 20px;
+        }
+        /* Estilo opcional para indicar que o item é clicável */
+        .topic-header:hover {
+            color: #1e90ff;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navegação entre Slides no topo -->
+<div class="w3-center w3-margin-top">
+    <a href="aula01-topico-13.html" class="w3-button w3-blue w3-round">&#10094; Anterior</a>
+    <a href="aula01-topico-15.html" class="w3-button w3-blue w3-round">Próximo &#10095;</a>
+</div>
+
+<div class="w3-container">
+    <h2 class="w3-text-indigo">7. Noções de Redes de Computadores</h2>
+
+    <h3 class="w3-text-purple">7.1. Modelos de Rede</h3>
+    <ul class="w3-ul w3-leftbar w3-border-purple">
+        <li>
+            <strong class="topic-header">Modelo OSI</strong>
+            <div class="topic-content">
+                <p>
+                    O <strong>Modelo OSI (Open Systems Interconnection)</strong> é um modelo de referência com sete camadas que padroniza as funções de uma rede de comunicação.
+                </p>
+                <p><strong>As Sete Camadas:</strong></p>
+                <ol>
+                    <li><strong>Física</strong>: Transmissão de bits brutos pelo meio físico.</li>
+                    <li><strong>Enlace de Dados</strong>: Transferência confiável de dados entre dois nós adjacentes.</li>
+                    <li><strong>Rede</strong>: Determinação de rotas e encaminhamento de pacotes.</li>
+                    <li><strong>Transporte</strong>: Comunicação confiável entre hosts finais.</li>
+                    <li><strong>Sessão</strong>: Gerenciamento de sessões entre aplicações.</li>
+                    <li><strong>Apresentação</strong>: Tradução, compressão e criptografia de dados.</li>
+                    <li><strong>Aplicação</strong>: Serviços de rede para aplicativos.</li>
+                </ol>
+                <p>
+                    O modelo OSI é fundamental para entender como as diferentes camadas interagem e permitem a comunicação em redes complexas.
+                </p>
+                <p><strong>Exemplo Prático:</strong> Protocolos como Ethernet operam na camada de Enlace de Dados, enquanto o HTTP opera na camada de Aplicação.</p>
+            </div>
+        </li>
+        <li>
+            <strong class="topic-header">Modelo TCP/IP</strong>
+            <div class="topic-content">
+                <p>
+                    O <strong>Modelo TCP/IP</strong> é um modelo de arquitetura de protocolos em quatro camadas, desenvolvido para a internet.
+                </p>
+                <p><strong>As Quatro Camadas:</strong></p>
+                <ol>
+                    <li><strong>Camada de Acesso à Rede</strong>: Combina funções das camadas Física e de Enlace de Dados do modelo OSI.</li>
+                    <li><strong>Camada Internet</strong>: Equivalente à camada de Rede do OSI; responsável pelo roteamento (exemplo: protocolo IP).</li>
+                    <li><strong>Camada de Transporte</strong>: Proporciona comunicação entre processos (exemplos: TCP, UDP).</li>
+                    <li><strong>Camada de Aplicação</strong>: Combina as camadas de Sessão, Apresentação e Aplicação do OSI; fornece serviços para aplicativos (exemplos: HTTP, FTP, SMTP).</li>
+                </ol>
+                <p>
+                    O modelo TCP/IP é a base da internet atual, permitindo a interoperabilidade entre diferentes sistemas e redes.
+                </p>
+                <p><strong>Exemplo Prático:</strong> Quando você acessa um site, seu navegador utiliza protocolos da camada de Aplicação (HTTP/HTTPS) sobre TCP/IP para se comunicar com o servidor.</p>
+            </div>
+        </li>
+    </ul>
+
+    <h3 class="w3-text-purple">7.2. Protocolos Básicos</h3>
+    <ul class="w3-ul w3-leftbar w3-border-purple">
+        <li>
+            <strong class="topic-header">Protocolo IP (Internet Protocol)</strong>
+            <div class="topic-content">
+                <p>
+                    O <strong>Protocolo IP</strong> é o protocolo principal da camada Internet do modelo TCP/IP. Ele é responsável pelo endereçamento e roteamento dos pacotes de dados entre redes.
+                </p>
+                <p><strong>Características:</strong></p>
+                <ul>
+                    <li>Protocolo não orientado à conexão.</li>
+                    <li>Protocolo sem garantia de entrega (melhor esforço).</li>
+                    <li>Utiliza endereços IP para identificar dispositivos na rede.</li>
+                </ul>
+                <p><strong>Versões:</strong></p>
+                <ul>
+                    <li><strong>IPv4</strong>: Utiliza endereços de 32 bits.</li>
+                    <li><strong>IPv6</strong>: Utiliza endereços de 128 bits, expandindo o espaço de endereçamento.</li>
+                </ul>
+                <p><strong>Exemplo Prático:</strong> O IP roteia pacotes de dados da sua máquina até o servidor de destino na internet.</p>
+            </div>
+        </li>
+        <li>
+            <strong class="topic-header">Protocolo TCP (Transmission Control Protocol)</strong>
+            <div class="topic-content">
+                <p>
+                    O <strong>TCP</strong> é um protocolo da camada de Transporte que fornece comunicação confiável, orientada à conexão entre aplicações.
+                </p>
+                <p><strong>Características:</strong></p>
+                <ul>
+                    <li>Estabelece uma conexão antes da transferência de dados (handshake de três vias).</li>
+                    <li>Garante a entrega dos dados na ordem correta.</li>
+                    <li>Controle de fluxo e congestionamento.</li>
+                </ul>
+                <p><strong>Exemplo Prático:</strong> Ao enviar um e-mail ou acessar um site, o TCP garante que todos os dados sejam entregues corretamente.</p>
+            </div>
+        </li>
+        <li>
+            <strong class="topic-header">Protocolo UDP (User Datagram Protocol)</strong>
+            <div class="topic-content">
+                <p>
+                    O <strong>UDP</strong> é um protocolo da camada de Transporte que oferece comunicação não confiável, não orientada à conexão.
+                </p>
+                <p><strong>Características:</strong></p>
+                <ul>
+                    <li>Não estabelece conexão antes da transferência de dados.</li>
+                    <li>Menor overhead, permitindo transferências mais rápidas.</li>
+                    <li>Não garante a entrega ou a ordem dos dados.</li>
+                </ul>
+                <p><strong>Exemplo Prático:</strong> Aplicações como streaming de vídeo ao vivo ou jogos online utilizam UDP para minimizar latência.</p>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!-- Script para expandir/ocultar conteúdo -->
+<script>
+    // Seleciona todos os elementos com a classe 'topic-header'
+    var headers = document.getElementsByClassName('topic-header');
+
+    for (var i = 0; i < headers.length; i++) {
+        headers[i].addEventListener('click', function() {
+            // Encontra o próximo elemento irmão, que é o 'topic-content'
+            var content = this.nextElementSibling;
+            // Alterna a exibição do conteúdo
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+            } else {
+                content.style.display = 'block';
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

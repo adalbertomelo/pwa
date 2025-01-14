@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aula 01 - Slide 10</title>
+    <meta charset="UTF-8">
+    <!-- Importa o w3.css para estilos -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .topic-header {
+            cursor: pointer;
+            user-select: none;
+        }
+        .topic-content {
+            display: none;
+            margin-left: 20px;
+        }
+        /* Estilo opcional para indicar que o item é clicável */
+        .topic-header:hover {
+            color: #1e90ff;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navegação entre Slides no topo -->
+<div class="w3-center w3-margin-top">
+    <a href="aula01-topico-9.html" class="w3-button w3-blue w3-round">&#10094; Anterior</a>
+    <a href="aula01-topico-11.html" class="w3-button w3-blue w3-round">Próximo &#10095;</a>
+</div>
+
+<div class="w3-container">
+    <h3 class="w3-text-red">4.2. Gerenciamento de Memória Contínua</h3>
+    <ul class="w3-ul w3-leftbar w3-border-red">
+        <li>
+            <strong class="topic-header">Alocação Particionada Fixa</strong>
+            <div class="topic-content">
+                <p>
+                    A <strong>Alocação Particionada Fixa</strong> divide a memória principal em várias partições de tamanho fixo. Cada partição pode conter exatamente um processo. Os tamanhos das partições podem ser iguais ou diferentes.
+                </p>
+                <p><strong>Características:</strong></p>
+                <ul>
+                    <li>Simples de implementar.</li>
+                    <li>Baixo overhead de gerenciamento.</li>
+                </ul>
+                <p><strong>Desvantagens:</strong></p>
+                <ul>
+                    <li><strong>Fragmentação Interna</strong>: Se um processo não utiliza todo o espaço da partição, o espaço restante fica inutilizado.</li>
+                    <li>Uso ineficiente da memória quando os processos têm tamanhos variáveis.</li>
+                    <li>Limitação no número de processos que podem ser carregados simultaneamente (igual ao número de partições).</li>
+                </ul>
+                <p>
+                    Esta técnica foi usada em sistemas antigos e é raramente utilizada em sistemas modernos devido às suas limitações.
+                </p>
+                <p><strong>Exemplo Prático:</strong> Em um sistema com 4 partições fixas de 1 GB cada, um processo de 500 MB ocuparia uma partição inteira, desperdiçando 500 MB de memória.</p>
+            </div>
+        </li>
+        <li>
+            <strong class="topic-header">Alocação Particionada Variável</strong>
+            <div class="topic-content">
+                <p>
+                    Na <strong>Alocação Particionada Variável</strong>, as partições são criadas dinamicamente de acordo com as necessidades dos processos. A memória é alocada em blocos contíguos do tamanho exato requerido pelo processo.
+                </p>
+                <p><strong>Características:</strong></p>
+                <ul>
+                    <li>Melhor utilização da memória, reduzindo a fragmentação interna.</li>
+                    <li>Flexibilidade para acomodar processos de diferentes tamanhos.</li>
+                </ul>
+                <p><strong>Desafios:</strong></p>
+                <ul>
+                    <li><strong>Fragmentação Externa</strong>: Espaços livres pequenos e não contíguos podem se acumular, dificultando a alocação de processos maiores.</li>
+                    <li>Necessidade de algoritmos para gerenciar o espaço livre, como:
+                        <ul>
+                            <li><strong>First Fit</strong>: Aloca o primeiro bloco de memória suficientemente grande.</li>
+                            <li><strong>Best Fit</strong>: Aloca o menor bloco de memória que é suficientemente grande.</li>
+                            <li><strong>Worst Fit</strong>: Aloca o maior bloco de memória disponível.</li>
+                        </ul>
+                    </li>
+                    <li>Possibilidade de utilizar técnicas de <strong>compactação</strong> para reduzir a fragmentação externa, movendo processos para combinar espaços livres.</li>
+                </ul>
+                <p>
+                    A alocação particionada variável oferece um melhor uso da memória, mas requer mecanismos mais complexos de gerenciamento.
+                </p>
+                <p><strong>Exemplo Prático:</strong> Se vários processos de diferentes tamanhos são carregados e finalizados em ordem aleatória, podem surgir espaços livres entre processos que somente acomodam processos menores, dificultando a alocação de novos processos maiores.</p>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!-- Script para expandir/ocultar conteúdo -->
+<script>
+    // Seleciona todos os elementos com a classe 'topic-header'
+    var headers = document.getElementsByClassName('topic-header');
+
+    for (var i = 0; i < headers.length; i++) {
+        headers[i].addEventListener('click', function() {
+            // Encontra o próximo elemento irmão, que é o 'topic-content'
+            var content = this.nextElementSibling;
+            // Alterna a exibição do conteúdo
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+            } else {
+                content.style.display = 'block';
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

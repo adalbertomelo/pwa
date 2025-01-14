@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula: Formulação de Algoritmos e sua Representação</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .example-code {
+            background-color: #f1f1f1;
+            padding: 15px;
+            border-left: 4px solid #4CAF50;
+            margin-bottom: 20px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .activity {
+            background-color: #ffebcc;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="w3-container w3-teal">
+        <h1 class="w3-center">Formulação de Algoritmos e sua Representação</h1>
+    </header>
+
+    <div class="container">
+
+        <section>
+            <h2>Objetivos</h2>
+            <ul class="w3-ul w3-border">
+                <li>Introduzir os conceitos fundamentais sobre algoritmos e suas propriedades.</li>
+                <li>Explorar as etapas de formulação de um algoritmo.</li>
+                <li>Apresentar diferentes formas de representação de algoritmos, como pseudocódigo e fluxogramas.</li>
+                <li>Aplicar a construção de algoritmos através de exemplos práticos.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>1. Introdução aos Algoritmos</h2>
+            <p>Um <b>algoritmo</b> é uma sequência finita de instruções bem definidas para resolver um problema ou executar uma tarefa.</p>
+            <p><b>Propriedades dos Algoritmos:</b></p>
+            <ul class="w3-ul w3-border">
+                <li><b>Finitude</b>: O algoritmo deve terminar após um número finito de passos.</li>
+                <li><b>Clareza</b>: Cada passo deve ser claro e sem ambiguidades.</li>
+                <li><b>Entradas e Saídas</b>: O algoritmo deve ter zero ou mais entradas e pelo menos uma saída.</li>
+                <li><b>Eficiência</b>: Deve ser eficiente em termos de tempo e espaço.</li>
+            </ul>
+
+            <div class="example-code">
+                <b>Exemplo:</b> Algoritmo para somar dois números.
+                <pre>
+Passo 1: Leia o primeiro número (A)
+Passo 2: Leia o segundo número (B)
+Passo 3: Some A e B (C = A + B)
+Passo 4: Exiba o resultado (C)
+                </pre>
+            </div>
+        </section>
+
+        <section>
+            <h2>2. Etapas de Formulação de Algoritmos</h2>
+            <ul class="w3-ul w3-border">
+                <li><b>1. Compreensão do Problema:</b> Defina claramente o problema e identifique os dados de entrada e saída.</li>
+                <li><b>2. Análise do Problema:</b> Divida o problema em partes menores e escolha a abordagem mais eficiente.</li>
+                <li><b>3. Desenvolvimento do Algoritmo:</b> Defina os passos lógicos e as condições para chegar à solução.</li>
+                <li><b>4. Teste e Validação:</b> Teste o algoritmo para garantir sua precisão e eficiência.</li>
+            </ul>
+
+            <div class="example-code">
+                <b>Exemplo:</b> Algoritmo para encontrar o maior número entre três valores.
+                <pre>
+Passo 1: Leia os três números (A, B, C)
+Passo 2: Se A for maior que B e A for maior que C, o maior é A.
+Passo 3: Se B for maior que A e B for maior que C, o maior é B.
+Passo 4: Caso contrário, o maior é C.
+                </pre>
+            </div>
+        </section>
+
+        <section>
+            <h2>3. Representação de Algoritmos</h2>
+            <p><b>Pseudocódigo:</b> É uma maneira de escrever algoritmos de forma clara e intuitiva, sem a preocupação com a sintaxe de uma linguagem de programação específica.</p>
+            <div class="example-code">
+                <b>Exemplo:</b> Algoritmo de verificação de número par ou ímpar.
+                <pre>
+Início
+    Leia o número (N)
+    Se N mod 2 = 0 então
+        Exiba "Par"
+    Senão
+        Exiba "Ímpar"
+Fim
+                </pre>
+            </div>
+
+            <p><b>Fluxogramas:</b> Representam graficamente os passos de um algoritmo, utilizando formas geométricas como retângulos, losangos e paralelogramos.</p>
+            <div class="w3-center">
+                <img src="https://i.imgur.com/yyAptjA.png" alt="Exemplo de Fluxograma" class="w3-image">
+            </div>
+        </section>
+
+        <section>
+            <h2>4. Exemplos Práticos de Algoritmos</h2>
+
+            <div class="example-code">
+                <b>Exemplo 1:</b> Algoritmo para calcular a média de uma lista de números.
+                <pre>
+Passo 1: Leia a quantidade de números (n)
+Passo 2: Para i de 1 até n, faça:
+         Leia o número e adicione ao total.
+Passo 3: Calcule a média (total / n)
+Passo 4: Exiba a média.
+                </pre>
+            </div>
+
+            <div class="example-code">
+                <b>Exemplo 2:</b> Algoritmo para determinar se um número é primo.
+                <pre>
+Passo 1: Leia o número (n)
+Passo 2: Para i de 2 até √n, faça:
+         Se n for divisível por i, exiba "Não é primo" e termine.
+Passo 3: Se nenhum divisor for encontrado, exiba "É primo".
+                </pre>
+            </div>
+
+            <div class="example-code">
+                <b>Exemplo 3:</b> Algoritmo de ordenação por seleção.
+                <pre>
+Passo 1: Para i de 0 até n-1 faça:
+         a) Encontre o menor elemento da lista não ordenada.
+         b) Troque-o com o primeiro elemento não ordenado.
+Passo 2: Repita até que toda a lista esteja ordenada.
+                </pre>
+            </div>
+
+        </section>
+
+        <section>
+            <h2>5. Atividades Práticas</h2>
+            <div class="activity">
+                <b>Atividade 1:</b> Crie um algoritmo para calcular o fatorial de um número.
+            </div>
+
+            <div class="activity">
+                <b>Atividade 2:</b> Desenvolva um algoritmo para ordenar uma lista de números usando o método da bolha (bubble sort).
+            </div>
+
+            <div class="activity">
+                <b>Atividade 3:</b> Escreva um algoritmo que, dado um número inteiro, determine a soma de todos os números ímpares entre 1 e o número fornecido.
+            </div>
+
+            <div class="activity">
+                <b>Atividade 4:</b> Crie um fluxograma que represente o algoritmo de busca binária para encontrar um número em uma lista ordenada.
+            </div>
+        </section>
+
+        <section>
+            <h2>6. Conclusão</h2>
+            <p>Os algoritmos são a base da programação e são fundamentais para resolver problemas de forma eficiente. A prática na formulação e representação de algoritmos ajuda a desenvolver o raciocínio lógico e a capacidade de resolver problemas complexos. Durante esta aula, vimos diferentes formas de representar e formular algoritmos, desde pseudocódigo até fluxogramas, e aplicamos esses conceitos em exemplos práticos.</p>
+        </section>
+
+        <footer class="w3-container w3-teal w3-center">
+            <p>&copy; 2024 - Programação Científica - IFPA Campus Ananindeua</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

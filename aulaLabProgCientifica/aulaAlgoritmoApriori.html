@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Aula Prática - Algoritmo Apriori</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .content {
+            margin: 20px;
+        }
+        .step {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="w3-container w3-blue w3-center">
+    <h1>Aula Prática - Algoritmo Apriori</h1>
+</header>
+
+<div class="w3-container content">
+
+    <!-- Introduction -->
+    <section class="w3-card w3-margin w3-padding">
+        <h2>Introdução</h2>
+        <p>
+            O algoritmo Apriori é amplamente utilizado para encontrar associações em grandes conjuntos de dados. Ele é especialmente aplicado em sistemas de recomendação e na descoberta de padrões frequentes em bases transacionais. Vamos aprender como implementar o Apriori, passo a passo.
+        </p>
+    </section>
+
+    <!-- Step 1 -->
+    <section class="w3-card w3-margin w3-padding step">
+        <h2>Passo 1: Definir o Conjunto de Transações</h2>
+        <p>
+            O primeiro passo para aplicar o algoritmo Apriori é definir o conjunto de transações. Cada transação consiste em um conjunto de itens. Um exemplo de conjunto de transações pode ser:
+        </p>
+        <pre>
+Transações = [
+    {Leite, Pão, Manteiga},
+    {Café, Pão, Manteiga},
+    {Leite, Pão, Café, Biscoito},
+    {Leite, Biscoito}
+]
+        </pre>
+        <p>
+            Aqui, cada linha representa uma transação, e cada transação contém um ou mais itens. O algoritmo Apriori vai descobrir padrões frequentes entre esses itens.
+        </p>
+    </section>
+
+    <!-- Step 2 -->
+    <section class="w3-card w3-margin w3-padding step">
+        <h2>Passo 2: Determinar o Suporte Mínimo</h2>
+        <p>
+            O suporte mínimo define a frequência mínima com que um conjunto de itens deve aparecer em todas as transações. Definir um suporte muito baixo pode resultar em muitos padrões irrelevantes, enquanto um suporte muito alto pode resultar em poucos padrões encontrados.
+        </p>
+        <p>
+            Exemplo: Se definirmos o suporte mínimo como 50%, os conjuntos de itens devem aparecer em pelo menos 2 das 4 transações.
+        </p>
+    </section>
+
+    <!-- Step 3 -->
+    <section class="w3-card w3-margin w3-padding step">
+        <h2>Passo 3: Gerar os Conjuntos de Itens Frequentes</h2>
+        <p>
+            A partir do conjunto de transações, o Apriori gera os conjuntos de itens frequentes que atendem ao suporte mínimo. No início, ele conta as ocorrências de cada item individualmente e, em seguida, combina-os para gerar conjuntos de itens maiores.
+        </p>
+        <p>Exemplo de saída:</p>
+        <pre>
+Conjuntos Frequentes:
+    {Leite}, {Pão}, {Manteiga}, {Café}, {Biscoito}
+    {Leite, Pão}, {Pão, Manteiga}, {Leite, Biscoito}
+        </pre>
+    </section>
+
+    <!-- Step 4 -->
+    <section class="w3-card w3-margin w3-padding step">
+        <h2>Passo 4: Gerar as Regras de Associação</h2>
+        <p>
+            A última etapa do algoritmo Apriori é a geração de regras de associação com base nos conjuntos de itens frequentes. Para cada conjunto frequente, as regras são geradas para prever a presença de um item com base na presença de outros itens.
+        </p>
+        <p>
+            Exemplo de regra: <strong>Se {Leite} então {Biscoito}</strong> - Isso significa que, em todas as transações que contêm "Leite", há uma forte chance de que também contenham "Biscoito".
+        </p>
+    </section>
+
+    <!-- Step 5 -->
+    <section class="w3-card w3-margin w3-padding step">
+        <h2>Passo 5: Avaliação das Regras</h2>
+        <p>
+            As regras geradas são avaliadas com base em duas métricas principais: 
+        </p>
+        <ul>
+            <li><strong>Confiança:</strong> Mede a probabilidade de que, dado um conjunto de itens, os itens da consequência também estejam presentes.</li>
+            <li><strong>Lift:</strong> Mede a importância da regra de associação, verificando se a presença de um conjunto de itens aumenta a probabilidade da consequência.</li>
+        </ul>
+        <p>Exemplo de cálculo:</p>
+        <pre>
+Confiança da regra {Leite} => {Biscoito} = 0.75 (75%)
+Lift da regra {Leite} => {Biscoito} = 1.5 (Significa que há uma correlação positiva entre Leite e Biscoito)
+        </pre>
+    </section>
+
+    <!-- Conclusion -->
+    <section class="w3-card w3-margin w3-padding">
+        <h2>Conclusão</h2>
+        <p>
+            O algoritmo Apriori é uma técnica poderosa para encontrar associações em grandes volumes de dados. A partir de um conjunto de transações e um suporte mínimo, podemos descobrir padrões ocultos e usá-los para insights valiosos. Pratique implementando o algoritmo em seus próprios dados!
+        </p>
+    </section>
+
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-blue w3-center">
+    <p>© 2024 - Aula sobre Apriori</p>
+</footer>
+
+</body>
+</html>

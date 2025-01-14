@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aula 01 - Slide 12</title>
+    <meta charset="UTF-8">
+    <!-- Importa o w3.css para estilos -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .topic-header {
+            cursor: pointer;
+            user-select: none;
+        }
+        .topic-content {
+            display: none;
+            margin-left: 20px;
+        }
+        /* Estilo opcional para indicar que o item é clicável */
+        .topic-header:hover {
+            color: #1e90ff;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navegação entre Slides no topo -->
+<div class="w3-center w3-margin-top">
+    <a href="aula01-topico-11.html" class="w3-button w3-blue w3-round">&#10094; Anterior</a>
+    <a href="aula01-topico-13.html" class="w3-button w3-blue w3-round">Próximo &#10095;</a>
+</div>
+
+<div class="w3-container">
+    <h2 class="w3-text-indigo">5. Sistemas de Arquivos</h2>
+    <h3 class="w3-text-brown">5.1 Organização de Arquivos</h3>
+    <ul class="w3-ul w3-leftbar w3-border-brown">
+        <li>
+            <strong class="topic-header">Estrutura de Diretórios</strong>
+            <div class="topic-content">
+                <p>
+                    A estrutura de diretórios organiza os arquivos de um sistema operacional de forma hierárquica. Isso facilita a localização, armazenamento e gerenciamento de arquivos. Os tipos comuns de estruturas de diretórios incluem:
+                </p>
+                <ul>
+                    <li><strong>Estrutura em Árvore</strong>: Diretórios são organizados em forma hierárquica, com um único diretório raiz.</li>
+                    <li><strong>Estrutura em Grafo Acíclico</strong>: Permite que arquivos ou diretórios tenham múltiplos pais, através de links ou atalhos.</li>
+                </ul>
+                <p>
+                    A organização adequada da estrutura de diretórios é essencial para a eficiência do sistema e facilidade de uso pelos usuários.
+                </p>
+                <p><strong>Exemplo Prático:</strong> Em sistemas Unix/Linux, o diretório raiz é representado por "/", e a hierarquia se estende para diretórios como "/home", "/usr", "/bin", etc.</p>
+            </div>
+        </li>
+    </ul>
+
+    <h3 class="w3-text-brown">5.2 Métodos de Acesso</h3>
+    <ul class="w3-ul w3-leftbar w3-border-brown">
+        <li>
+            <strong class="topic-header">Acesso Sequencial</strong>
+            <div class="topic-content">
+                <p>
+                    No <strong>Acesso Sequencial</strong>, os dados são acessados em uma ordem específica, geralmente do início ao fim. É o método mais simples de acesso a arquivos.
+                </p>
+                <p><strong>Características:</strong></p>
+                <ul>
+                    <li>Os dados são lidos ou escritos em sequência.</li>
+                    <li>A posição atual é atualizada após cada operação.</li>
+                    <li>A busca por um dado específico pode ser lenta, pois requer a leitura dos dados anteriores.</li>
+                </ul>
+                <p><strong>Exemplo Prático:</strong> Leitura de um arquivo de texto linha por linha.</p>
+            </div>
+        </li>
+        <li>
+            <strong class="topic-header">Acesso Direto (Aleatório)</strong>
+            <div class="topic-content">
+                <p>
+                    O <strong>Acesso Direto</strong> permite que os dados sejam lidos ou escritos em qualquer ordem, sem a necessidade de percorrer sequencialmente.
+                </p>
+                <p><strong>Características:</strong></p>
+                <ul>
+                    <li>Os arquivos são divididos em registros ou blocos numerados.</li>
+                    <li>É possível saltar diretamente para qualquer posição no arquivo.</li>
+                    <li>Mais eficiente para operações que requerem acesso frequente a posições específicas.</li>
+                </ul>
+                <p><strong>Exemplo Prático:</strong> Bancos de dados que precisam acessar registros específicos rapidamente.</p>
+            </div>
+        </li>
+    </ul>
+
+    <h3 class="w3-text-brown">Sistemas de Arquivos Comuns</h3>
+    <ul class="w3-ul w3-leftbar w3-border-brown">
+        <li>
+            <strong class="topic-header">FAT32</strong>
+            <div class="topic-content">
+                <p>
+                    O <strong>FAT32 (File Allocation Table 32)</strong> é um sistema de arquivos introduzido pela Microsoft. É uma extensão do FAT16 e suporta tamanhos de partição e arquivo maiores.
+                </p>
+                <p><strong>Características:</strong></p>
+                <ul>
+                    <li>Compatibilidade ampla com diferentes sistemas operacionais.</li>
+                    <li>Limite de tamanho de arquivo de até 4 GB.</li>
+                    <li>Sem suporte a permissões de arquivos ou recursos avançados.</li>
+                </ul>
+                <p><strong>Vantagens:</strong></p>
+                <ul>
+                    <li>Ideal para dispositivos de armazenamento removíveis como pen drives e cartões SD.</li>
+                    <li>Simples de implementar e gerenciar.</li>
+                </ul>
+                <p><strong>Desvantagens:</strong></p>
+                <ul>
+                    <li>Limitações de tamanho de arquivo e partição.</li>
+                    <li>Menor segurança e falta de criptografia nativa.</li>
+                </ul>
+                <p><strong>Exemplo Prático:</strong> Ao formatar um pen drive para transferir arquivos entre computadores com diferentes sistemas operacionais, o FAT32 é uma opção compatível com a maioria deles.</p>
+            </div>
+        </li>
+        <li>
+            <strong class="topic-header">NTFS</strong>
+            <div class="topic-content">
+                <p>
+                    O <strong>NTFS (New Technology File System)</strong> é um sistema de arquivos desenvolvido pela Microsoft para substituir o FAT32, oferecendo recursos avançados.
+                </p>
+                <p><strong>Características:</strong></p>
+                <ul>
+                    <li>Suporte a arquivos e partições de grande tamanho (teoricamente até 16 EB).</li>
+                    <li>Permissões e controle de acesso avançados.</li>
+                    <li>Recuperação de falhas com registro de transações.</li>
+                    <li>Criptografia de arquivos (EFS - Encrypting File System).</li>
+                </ul>
+                <p><strong>Vantagens:</strong></p>
+                <ul>
+                    <li>Maior segurança e confiabilidade.</li>
+                    <li>Melhor desempenho com arquivos grandes.</li>
+                </ul>
+                <p><strong>Desvantagens:</strong></p>
+                <ul>
+                    <li>Compatibilidade limitada com sistemas operacionais não Windows.</li>
+                    <li>Maior complexidade de gerenciamento.</li>
+                </ul>
+                <p><strong>Exemplo Prático:</strong> O NTFS é o sistema de arquivos padrão para discos rígidos internos em computadores Windows, oferecendo recursos necessários para ambientes corporativos.</p>
+            </div>
+        </li>
+        <li>
+            <strong class="topic-header">ext4</strong>
+            <div class="topic-content">
+                <p>
+                    O <strong>ext4 (Fourth Extended File System)</strong> é um sistema de arquivos usado principalmente em sistemas Linux, sucedendo os sistemas ext2 e ext3.
+                </p>
+                <p><strong>Características:</strong></p>
+                <ul>
+                    <li>Suporte a volumes de até 1 EB e arquivos de até 16 TB.</li>
+                    <li>Alocação tardia (delayed allocation) para melhorar desempenho.</li>
+                    <li>Compatibilidade com ext2 e ext3.</li>
+                    <li>Journaling para recuperação de falhas.</li>
+                </ul>
+                <p><strong>Vantagens:</strong></p>
+                <ul>
+                    <li>Alto desempenho e estabilidade.</li>
+                    <li>Recursos avançados como extents e checagem de integridade.</li>
+                </ul>
+                <p><strong>Desvantagens:</strong></p>
+                <ul>
+                    <li>Não é nativamente compatível com Windows ou macOS.</li>
+                    <li>Recuperação de dados mais complexa em caso de falhas graves.</li>
+                </ul>
+                <p><strong>Exemplo Prático:</strong> A maioria das distribuições Linux utiliza o ext4 como sistema de arquivos padrão para a partição raiz, devido ao seu equilíbrio entre desempenho e recursos.</p>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!-- Script para expandir/ocultar conteúdo -->
+<script>
+    // Seleciona todos os elementos com a classe 'topic-header'
+    var headers = document.getElementsByClassName('topic-header');
+
+    for (var i = 0; i < headers.length; i++) {
+        headers[i].addEventListener('click', function() {
+            // Encontra o próximo elemento irmão, que é o 'topic-content'
+            var content = this.nextElementSibling;
+            // Alterna a exibição do conteúdo
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+            } else {
+                content.style.display = 'block';
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

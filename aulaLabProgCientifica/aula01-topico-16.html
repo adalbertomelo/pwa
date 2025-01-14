@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aula 01 - Slide 16</title>
+    <meta charset="UTF-8">
+    <!-- Importa o w3.css para estilos -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .topic-header {
+            cursor: pointer;
+            user-select: none;
+        }
+        .topic-content {
+            display: none;
+            margin-left: 20px;
+        }
+        /* Estilo opcional para indicar que o item é clicável */
+        .topic-header:hover {
+            color: #1e90ff;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navegação entre Slides no topo -->
+<div class="w3-center w3-margin-top">
+    <a href="aula01-topico-15.html" class="w3-button w3-blue w3-round">&#10094; Anterior</a>
+    <a href="aula01-topico-17.html" class="w3-button w3-blue w3-round">Próximo &#10095;</a>
+</div>
+
+<div class="w3-container">
+    <h2 class="w3-text-indigo">Conclusão</h2>
+    <ul class="w3-ul w3-leftbar w3-border-indigo">
+        <li>
+            <strong class="topic-header">Resumo dos Principais Conceitos</strong>
+            <div class="topic-content">
+                <p>
+                    Ao longo desta aula, exploramos os fundamentos dos sistemas operacionais, incluindo gerenciamento de processos, memória, sistemas de arquivos, entrada/saída, redes de computadores e segurança. Compreender esses conceitos é essencial para profissionais de TI, pois os sistemas operacionais são a base sobre a qual softwares e aplicações são executados.
+                </p>
+                <p>
+                    Revisamos como os sistemas operacionais gerenciam recursos de hardware, fornecem abstrações para facilitar o desenvolvimento de software e implementam mecanismos para garantir segurança e eficiência.
+                </p>
+            </div>
+        </li>
+    </ul>
+
+    <h2 class="w3-text-indigo">Referências</h2>
+    <ul class="w3-ul w3-leftbar w3-border-indigo">
+        <li>
+            <strong class="topic-header">Bibliografia Recomendada</strong>
+            <div class="topic-content">
+                <p>
+                    <ul>
+                        <li>Silberschatz, A., Galvin, P. B., & Gagne, G. (2018). <strong>Sistemas Operacionais Modernos</strong>. 4ª edição. Elsevier.</li>
+                        <li>Tanenbaum, A. S., & Bos, H. (2015). <strong>Sistemas Operacionais: Projetos e Implementação</strong>. 3ª edição. Pearson.</li>
+                        <li>Stallings, W. (2014). <strong>Sistemas Operacionais: Internos e Projetos</strong>. 6ª edição. Pearson.</li>
+                        <li>Kurose, J. F., & Ross, K. W. (2017). <strong>Redes de Computadores e a Internet</strong>. 6ª edição. Pearson.</li>
+                        <li>Forouzan, B. A. (2012). <strong>Comunicação de Dados e Networking</strong>. McGraw-Hill.</li>
+                    </ul>
+                </p>
+            </div>
+        </li>
+        <li>
+            <strong class="topic-header">Sites e Documentações</strong>
+            <div class="topic-content">
+                <p>
+                    <ul>
+                        <li><strong>Documentação do Kernel Linux</strong>: <a href="https://www.kernel.org/doc/html/latest/" target="_blank">https://www.kernel.org/doc/html/latest/</a></li>
+                        <li><strong>Microsoft Docs</strong> (Windows): <a href="https://docs.microsoft.com/pt-br/windows/" target="_blank">https://docs.microsoft.com/pt-br/windows/</a></li>
+                        <li><strong>The Open Group</strong> (POSIX): <a href="https://www.opengroup.org/subjectareas/platform" target="_blank">https://www.opengroup.org/subjectareas/platform</a></li>
+                    </ul>
+                </p>
+            </div>
+        </li>
+    </ul>
+
+    <h2 class="w3-text-indigo">Atividades Propostas</h2>
+    <ul class="w3-ul w3-leftbar w3-border-indigo">
+        <li>
+            <strong class="topic-header">Questões para Reflexão</strong>
+            <div class="topic-content">
+                <p>
+                    <ol>
+                        <li>Explique a diferença entre processos e threads. Quais são as vantagens e desvantagens de utilizar threads?</li>
+                        <li>Descreva como a memória virtual facilita a execução de programas que requerem mais memória do que a disponível fisicamente.</li>
+                        <li>Compare e contraste os sistemas de arquivos FAT32, NTFS e ext4 em termos de recursos, compatibilidade e casos de uso.</li>
+                        <li>O que são interrupções e qual é o seu papel no gerenciamento de dispositivos de E/S?</li>
+                        <li>Discuta a importância da criptografia na segurança de sistemas computacionais.</li>
+                    </ol>
+                </p>
+            </div>
+        </li>
+        <li>
+            <strong class="topic-header">Exercícios Práticos</strong>
+            <div class="topic-content">
+                <p>
+                    <ol>
+                        <li>Instale uma máquina virtual com uma distribuição Linux e explore os diferentes sistemas de arquivos disponíveis. Formate uma partição usando ext4 e outra usando FAT32. Observe as diferenças.</li>
+                        <li>Utilize ferramentas de monitoramento de processos (como o Gerenciador de Tarefas no Windows ou o htop no Linux) para observar como o sistema operacional gerencia processos e threads.</li>
+                        <li>Configure regras básicas em um firewall pessoal e monitore o tráfego de rede para entender como as conexões são permitidas ou bloqueadas.</li>
+                        <li>Experimente programas que utilizam criptografia, como o VeraCrypt, para criar volumes criptografados e proteger dados sensíveis.</li>
+                        <li>Realize uma análise básica de segurança em seu sistema operacional, verificando atualizações pendentes, estado do antivírus e configurações de segurança.</li>
+                    </ol>
+                </p>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!-- Script para expandir/ocultar conteúdo -->
+<script>
+    // Seleciona todos os elementos com a classe 'topic-header'
+    var headers = document.getElementsByClassName('topic-header');
+
+    for (var i = 0; i < headers.length; i++) {
+        headers[i].addEventListener('click', function() {
+            // Encontra o próximo elemento irmão, que é o 'topic-content'
+            var content = this.nextElementSibling;
+            // Alterna a exibição do conteúdo
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+            } else {
+                content.style.display = 'block';
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

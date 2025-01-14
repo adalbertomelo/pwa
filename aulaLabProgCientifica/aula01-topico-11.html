@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aula 01 - Slide 11</title>
+    <meta charset="UTF-8">
+    <!-- Importa o w3.css para estilos -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .topic-header {
+            cursor: pointer;
+            user-select: none;
+        }
+        .topic-content {
+            display: none;
+            margin-left: 20px;
+        }
+        /* Estilo opcional para indicar que o item é clicável */
+        .topic-header:hover {
+            color: #1e90ff;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navegação entre Slides no topo -->
+<div class="w3-center w3-margin-top">
+    <a href="aula01-topico-10.html" class="w3-button w3-blue w3-round">&#10094; Anterior</a>
+    <a href="aula01-topico-12.html" class="w3-button w3-blue w3-round">Próximo &#10095;</a>
+</div>
+
+<div class="w3-container">
+    <h3 class="w3-text-red">4.3. Memória Cache</h3>
+    <ul class="w3-ul w3-leftbar w3-border-red">
+        <li>
+            <strong class="topic-header">Conceito de Memória Cache</strong>
+            <div class="topic-content">
+                <p>
+                    A <strong>Memória Cache</strong> é uma memória de alta velocidade que atua como intermediária entre a CPU e a memória principal (RAM). Seu objetivo é reduzir o tempo de acesso aos dados frequentemente utilizados, melhorando o desempenho geral do sistema.
+                </p>
+                <p><strong>Características:</strong></p>
+                <ul>
+                    <li>Velocidade maior que a da memória RAM, mas menor capacidade.</li>
+                    <li>Armazena cópias dos dados mais acessados da memória principal.</li>
+                    <li>Transparente para o usuário e para os programas.</li>
+                </ul>
+                <p><strong>Tipos de Cache:</strong></p>
+                <ul>
+                    <li><strong>Cache L1</strong>: Integrado ao processador, com tamanho pequeno e alta velocidade.</li>
+                    <li><strong>Cache L2</strong>: Também pode ser integrado ou externo ao processador, maior que o L1 e um pouco mais lento.</li>
+                    <li><strong>Cache L3</strong>: Presente em processadores mais modernos, ainda maior e mais lento que o L2.</li>
+                </ul>
+                <p><strong>Funcionamento:</strong></p>
+                <ul>
+                    <li>Quando a CPU precisa acessar dados, ela verifica primeiro o cache.</li>
+                    <li>Se os dados estiverem no cache (<strong>cache hit</strong>), o acesso é rápido.</li>
+                    <li>Se não estiverem (<strong>cache miss</strong>), os dados são buscados na memória RAM e uma cópia é armazenada no cache.</li>
+                </ul>
+                <p>
+                    O uso eficiente da memória cache é essencial para minimizar a discrepância de velocidade entre a CPU e a memória principal.
+                </p>
+                <p><strong>Exemplo Prático:</strong> Ao executar um loop que acessa repetidamente a mesma variável, essa variável será armazenada no cache, acelerando as operações subsequentes.</p>
+            </div>
+        </li>
+        <li>
+            <strong class="topic-header">Políticas de Substituição</strong>
+            <div class="topic-content">
+                <p>
+                    Quando o cache está cheio e novos dados precisam ser armazenados, o sistema precisa decidir quais dados existentes serão removidos. As <strong>Políticas de Substituição</strong> determinam como essa escolha é feita.
+                </p>
+                <p><strong>Principais Políticas:</strong></p>
+                <ul>
+                    <li><strong>FIFO (First-In, First-Out)</strong>: Remove o bloco mais antigo no cache.</li>
+                    <li><strong>LRU (Least Recently Used)</strong>: Remove o bloco que não é usado há mais tempo.</li>
+                    <li><strong>LFU (Least Frequently Used)</strong>: Remove o bloco menos acessado no total.</li>
+                    <li><strong>Random Replacement</strong>: Remove um bloco aleatoriamente.</li>
+                </ul>
+                <p><strong>Considerações:</strong></p>
+                <ul>
+                    <li>A escolha da política afeta o desempenho do cache.</li>
+                    <li>LRU é comumente usada por oferecer um bom equilíbrio entre complexidade e eficiência.</li>
+                    <li>Implementações eficientes de LRU podem ser complexas em hardware.</li>
+                </ul>
+                <p>
+                    O objetivo das políticas de substituição é minimizar a taxa de <strong>cache miss</strong>, mantendo os dados mais relevantes no cache.
+                </p>
+                <p><strong>Exemplo Prático:</strong> Em um processador que utiliza LRU, se um conjunto de dados é acessado com frequência, eles permanecerão no cache, enquanto dados menos utilizados serão substituídos.</p>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!-- Script para expandir/ocultar conteúdo -->
+<script>
+    // Seleciona todos os elementos com a classe 'topic-header'
+    var headers = document.getElementsByClassName('topic-header');
+
+    for (var i = 0; i < headers.length; i++) {
+        headers[i].addEventListener('click', function() {
+            // Encontra o próximo elemento irmão, que é o 'topic-content'
+            var content = this.nextElementSibling;
+            // Alterna a exibição do conteúdo
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+            } else {
+                content.style.display = 'block';
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

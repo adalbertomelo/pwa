@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aula 01 - Slide 7</title>
+    <meta charset="UTF-8">
+    <!-- Importa o w3.css para estilos -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .topic-header {
+            cursor: pointer;
+            user-select: none;
+        }
+        .topic-content {
+            display: none;
+            margin-left: 20px;
+        }
+        /* Estilo opcional para indicar que o item é clicável */
+        .topic-header:hover {
+            color: #1e90ff;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navegação entre Slides no topo -->
+<div class="w3-center w3-margin-top">
+    <a href="aula01-topico-6.html" class="w3-button w3-blue w3-round">&#10094; Anterior</a>
+    <a href="aula01-topico-8.html" class="w3-button w3-blue w3-round">Próximo &#10095;</a>
+</div>
+
+<div class="w3-container">
+    <h2 class="w3-text-indigo">3. Gerenciamento de Processos</h2>
+    <h3 class="w3-text-purple">3.1. Processos e Threads</h3>
+    <ul class="w3-ul w3-leftbar w3-border-purple">
+        <li>
+            <strong class="topic-header">Processo</strong>
+            <div class="topic-content">
+                <p>
+                    Um processo é uma instância de um programa em execução. Ele é composto por:
+                </p>
+                <ul>
+                    <li><strong>Código Executável</strong>: As instruções do programa.</li>
+                    <li><strong>Espaço de Endereçamento</strong>: Inclui memória para código, dados e pilha.</li>
+                    <li><strong>Recursos do Sistema</strong>: Como arquivos abertos, dispositivos de I/O e outros recursos alocados.</li>
+                </ul>
+                <p>
+                    Cada processo possui um <strong>PCB (Process Control Block)</strong> que armazena informações importantes para o gerenciamento do processo, como:
+                </p>
+                <ul>
+                    <li>Identificação do processo (PID).</li>
+                    <li>Estado atual (pronto, executando, bloqueado).</li>
+                    <li>Registradores de CPU e contador de programa.</li>
+                    <li>Informações de gerenciamento de memória.</li>
+                    <li>Informações de segurança e privilégios.</li>
+                </ul>
+                <p>
+                    O sistema operacional utiliza o PCB para rastrear e gerenciar processos, permitindo multitarefa e garantindo isolamento entre processos.
+                </p>
+                <p><strong>Exemplo Prático:</strong> Quando você abre um editor de texto, o sistema operacional cria um processo que contém o programa do editor, aloca memória e recursos necessários para sua execução.</p>
+            </div>
+        </li>
+        <li>
+            <strong class="topic-header">Thread</strong>
+            <div class="topic-content">
+                <p>
+                    Uma thread é a menor unidade de execução que pode ser agendada. As threads compartilham o mesmo espaço de endereçamento e recursos do processo pai, mas possuem seu próprio:
+                </p>
+                <ul>
+                    <li><strong>Contador de Programa</strong>: Para rastrear qual instrução está sendo executada.</li>
+                    <li><strong>Conjunto de Registradores</strong>: Para armazenar o estado de execução.</li>
+                    <li><strong>Pilha</strong>: Para chamadas de função e variáveis locais.</li>
+                </ul>
+                <p>
+                    Vantagens do uso de threads incluem:
+                </p>
+                <ul>
+                    <li><strong>Melhor Desempenho</strong>: Em sistemas com múltiplos núcleos, threads podem ser executadas em paralelo.</li>
+                    <li><strong>Responsividade</strong>: Aplicativos podem continuar respondendo ao usuário enquanto realizam operações em segundo plano.</li>
+                    <li><strong>Economia de Recursos</strong>: Criar threads é menos custoso do que criar processos completos.</li>
+                </ul>
+                <p>
+                    Desafios incluem:
+                </p>
+                <ul>
+                    <li><strong>Sincronização</strong>: Necessidade de mecanismos como mutexes e semáforos para evitar condições de corrida.</li>
+                    <li><strong>Concorrência</strong>: Garantir que o acesso a recursos compartilhados seja controlado.</li>
+                </ul>
+                <p>
+                    Threads podem ser gerenciadas a nível de usuário ou de kernel, cada uma com suas vantagens e desvantagens em termos de desempenho e complexidade.
+                </p>
+                <p><strong>Exemplo Prático:</strong> Um navegador web pode usar múltiplas threads para carregar diferentes elementos de uma página simultaneamente, como imagens, scripts e textos.</p>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!-- Script para expandir/ocultar conteúdo -->
+<script>
+    // Seleciona todos os elementos com a classe 'topic-header'
+    var headers = document.getElementsByClassName('topic-header');
+
+    for (var i = 0; i < headers.length; i++) {
+        headers[i].addEventListener('click', function() {
+            // Encontra o próximo elemento irmão, que é o 'topic-content'
+            var content = this.nextElementSibling;
+            // Alterna a exibição do conteúdo
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+            } else {
+                content.style.display = 'block';
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

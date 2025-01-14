@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aula 01 - Slide 8</title>
+    <meta charset="UTF-8">
+    <!-- Importa o w3.css para estilos -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .topic-header {
+            cursor: pointer;
+            user-select: none;
+        }
+        .topic-content {
+            display: none;
+            margin-left: 20px;
+        }
+        /* Estilo opcional para indicar que o item é clicável */
+        .topic-header:hover {
+            color: #1e90ff;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navegação entre Slides no topo -->
+<div class="w3-center w3-margin-top">
+    <a href="aula01-topico-7.html" class="w3-button w3-blue w3-round">&#10094; Anterior</a>
+    <a href="aula01-topico-9.html" class="w3-button w3-blue w3-round">Próximo &#10095;</a>
+</div>
+
+<div class="w3-container">
+    <h3 class="w3-text-purple">3.2. Escalonamento de Processos</h3>
+    <ul class="w3-ul w3-leftbar w3-border-purple">
+        <li>
+            <strong class="topic-header">Algoritmos de Escalonamento</strong>
+            <div class="topic-content">
+                <p>
+                    O escalonamento é fundamental para a eficiência do sistema operacional. Alguns algoritmos comuns incluem:
+                </p>
+                <ul>
+                    <li>
+                        <strong>FIFO (First-In, First-Out)</strong>:
+                        <p>
+                            - Os processos são atendidos na ordem de chegada.<br>
+                            - Simples de implementar.<br>
+                            - Pode levar ao problema de <strong>convoy effect</strong>, onde processos curtos esperam por processos longos.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Round Robin</strong>:
+                        <p>
+                            - Cada processo recebe um tempo de CPU fixo (quantum).<br>
+                            - Após o quantum, o processo é colocado no final da fila.<br>
+                            - Justo e eficiente para sistemas time-sharing.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Escalonamento por Prioridade</strong>:
+                        <p>
+                            - Cada processo tem uma prioridade.<br>
+                            - O processo com maior prioridade é executado primeiro.<br>
+                            - Pode ser <strong>preemptivo</strong> ou <strong>não preemptivo</strong>.<br>
+                            - Risco de <strong>starvation</strong> para processos de baixa prioridade. <strong>Aging</strong> pode ser usado para aumentar a prioridade de processos antigos.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Shortest Job First (SJF)</strong>:
+                        <p>
+                            - O processo com o menor tempo de execução previsto é escolhido.<br>
+                            - Ótimo para minimizar o tempo médio de espera.<br>
+                            - Difícil de implementar porque requer previsão precisa dos tempos de execução.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Multilevel Queue</strong>:
+                        <p>
+                            - Processos são divididos em várias filas com prioridades diferentes.<br>
+                            - Cada fila pode ter seu próprio algoritmo de escalonamento.<br>
+                            - Exemplo: Uma fila para processos interativos e outra para processos em lote.
+                        </p>
+                    </li>
+                </ul>
+                <p>
+                    A escolha do algoritmo afeta o desempenho do sistema em termos de throughput, tempo de resposta e justiça.
+                </p>
+                <p><strong>Exemplo Prático:</strong> Em um ambiente de sistema operacional compartilhado, como um servidor de terminal, o escalonamento Round Robin permite que todos os usuários tenham um tempo de processamento justo, melhorando a experiência geral.</p>
+            </div>
+        </li>
+        <li>
+            <strong class="topic-header">Estados de um Processo</strong>
+            <div class="topic-content">
+                <p>
+                    Os processos transitam entre diferentes estados durante sua execução:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Novo</strong>:
+                        <p>
+                            - O processo está sendo criado.<br>
+                            - Recursos são alocados, e o PCB é inicializado.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Pronto</strong>:
+                        <p>
+                            - O processo está preparado para ser executado.<br>
+                            - Está na fila de processos prontos, aguardando tempo de CPU.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Executando</strong>:
+                        <p>
+                            - O processo está em execução na CPU.<br>
+                            - Possui controle dos registradores e contador de programa.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Bloqueado</strong>:
+                        <p>
+                            - O processo não pode prosseguir sem que um evento ocorra (como conclusão de I/O).<br>
+                            - É removido da fila de prontos até que o evento aconteça.
+                        </p>
+                    </li>
+                    <li>
+                        <strong>Finalizado</strong>:
+                        <p>
+                            - O processo completou sua execução ou foi terminado.<br>
+                            - Recursos são liberados, e o PCB é removido.
+                        </p>
+                    </li>
+                </ul>
+                <p>
+                    <strong>Transições entre estados</strong>:
+                </p>
+                <ul>
+                    <li><strong>Pronto ➔ Executando</strong>: Quando o processo é selecionado pelo escalonador.</li>
+                    <li><strong>Executando ➔ Pronto</strong>: Preempção devido a time slice expirado ou prioridade.</li>
+                    <li><strong>Executando ➔ Bloqueado</strong>: Processo aguarda por I/O ou outro evento.</li>
+                    <li><strong>Bloqueado ➔ Pronto</strong>: Evento aguardado ocorreu.</li>
+                    <li><strong>Executando ➔ Finalizado</strong>: Processo termina normalmente ou por erro.</li>
+                </ul>
+                <p>
+                    O gerenciamento adequado dos estados dos processos é essencial para a eficiência e estabilidade do sistema operacional.
+                </p>
+                <p><strong>Exemplo Prático:</strong> Ao imprimir um documento, o processo pode passar do estado "Executando" para "Bloqueado" enquanto aguarda a conclusão da operação de I/O, retornando ao estado "Pronto" quando a impressão é concluída.</p>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!-- Script para expandir/ocultar conteúdo -->
+<script>
+    // Seleciona todos os elementos com a classe 'topic-header'
+    var headers = document.getElementsByClassName('topic-header');
+
+    for (var i = 0; i < headers.length; i++) {
+        headers[i].addEventListener('click', function() {
+            // Encontra o próximo elemento irmão, que é o 'topic-content'
+            var content = this.nextElementSibling;
+            // Alterna a exibição do conteúdo
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+            } else {
+                content.style.display = 'block';
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

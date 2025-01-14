@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aula 01 - Slide 3</title>
+    <meta charset="UTF-8">
+    <!-- Importa o w3.css para estilos -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .topic-header {
+            cursor: pointer;
+            user-select: none;
+        }
+        .topic-content {
+            display: none;
+            margin-left: 20px;
+        }
+        /* Estilo opcional para indicar que o item é clicável */
+        .topic-header:hover {
+            color: #1e90ff;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navegação entre Slides no topo -->
+<div class="w3-center w3-margin-top">
+    <a href="aula01-topico-2.html" class="w3-button w3-blue w3-round">&#10094; Anterior</a>
+    <a href="aula01-topico-4.html" class="w3-button w3-blue w3-round">Próximo &#10095;</a>
+</div>
+
+<div class="w3-container">
+    <h2 class="w3-text-indigo">1. Arquitetura de Sistemas de Computação</h2>
+    <h3 class="w3-text-green">1.1. Componentes de Hardware</h3>
+    <ul class="w3-ul w3-leftbar w3-border-green">
+        <li>
+            <strong class="topic-header">Unidade Central de Processamento (CPU)</strong>
+            <div class="topic-content">
+                <p>
+                    A CPU é o componente principal de processamento do computador. Ela executa instruções do sistema operacional e dos aplicativos, realizando operações aritméticas e lógicas através da Unidade Lógica e Aritmética (ALU). A Unidade de Controle (CU) gerencia o fluxo de dados dentro do sistema, coordenando a comunicação entre a CPU, memória e dispositivos de I/O. A performance da CPU é determinada por fatores como a frequência de clock, número de núcleos e arquitetura interna.
+                </p>
+                <p><strong>Exemplo Prático:</strong> Em um computador moderno, um processador Intel Core i9 com 8 núcleos e 16 threads permite executar múltiplas tarefas simultaneamente, como editar vídeos enquanto executa análises de dados.</p>
+            </div>
+        </li>
+        <li>
+            <strong class="topic-header">Memória Principal (RAM)</strong>
+            <div class="topic-content">
+                <p>
+                    A memória RAM armazena temporariamente dados e instruções que estão sendo utilizados pela CPU. Ela permite acesso rápido aos dados, essencial para o desempenho do sistema. A RAM é volátil, ou seja, seus dados são perdidos quando o computador é desligado. Tipos comuns de RAM incluem DDR4 e DDR5, que diferem em velocidade e eficiência energética. A capacidade da RAM influencia diretamente a capacidade de multitarefa do sistema.
+                </p>
+                <p><strong>Exemplo Prático:</strong> Um sistema com 16 GB de RAM permite ao usuário manter múltiplos aplicativos abertos, como um navegador com várias abas, um editor de texto e um software de edição gráfica, sem degradar significativamente o desempenho.</p>
+            </div>
+        </li>
+        <li>
+            <strong class="topic-header">Dispositivos de Armazenamento</strong>
+            <div class="topic-content">
+                <p>
+                    Dispositivos como HDs (Hard Disk Drives) e SSDs (Solid State Drives) são usados para armazenar dados de forma permanente. HDs utilizam discos magnéticos para leitura e escrita de dados, oferecendo grande capacidade de armazenamento a baixo custo, mas com velocidades menores e maior suscetibilidade a danos físicos. SSDs utilizam memória flash, proporcionando velocidades de leitura e escrita muito superiores, menor consumo de energia e maior resistência a impactos, porém com custo por gigabyte mais elevado. Tecnologias como NVMe e SATA influenciam a velocidade de comunicação entre o SSD e a placa-mãe.
+                </p>
+                <p><strong>Exemplo Prático:</strong> Um SSD NVMe M.2 pode atingir velocidades de leitura acima de 3.000 MB/s, reduzindo significativamente o tempo de inicialização do sistema operacional e o carregamento de aplicativos pesados, como jogos e softwares profissionais.</p>
+            </div>
+        </li>
+        <li>
+            <strong class="topic-header">Dispositivos de Entrada/Saída (I/O)</strong>
+            <div class="topic-content">
+                <p>
+                    Esses dispositivos permitem a comunicação entre o usuário e o sistema computacional. Dispositivos de entrada incluem teclados (para inserção de texto), mouses (para apontar e clicar), scanners (para digitalização de documentos) e microfones (para entrada de áudio). Dispositivos de saída incluem monitores (para exibição visual), impressoras (para produção de documentos físicos) e alto-falantes (para saída de áudio). Há também dispositivos híbridos, como telas sensíveis ao toque, que funcionam simultaneamente como dispositivos de entrada e saída. A performance e qualidade desses dispositivos afetam diretamente a experiência do usuário.
+                </p>
+                <p><strong>Exemplo Prático:</strong> Utilizar um monitor de alta resolução com suporte a HDR melhora a qualidade visual para designers gráficos, enquanto um teclado mecânico oferece melhor resposta tátil para programadores e gamers.</p>
+            </div>
+        </li>
+        <li>
+            <strong class="topic-header">Placa-mãe (Motherboard)</strong>
+            <div class="topic-content">
+                <p>
+                    A placa-mãe é o componente que conecta todos os outros componentes de hardware, permitindo a comunicação entre eles. Ela contém o chipset, slots de memória, slots de expansão (PCIe), conectores de armazenamento (SATA, M.2), portas USB, rede, áudio e o soquete da CPU. A qualidade e recursos da placa-mãe influenciam a capacidade de atualização e desempenho geral do sistema.
+                </p>
+                <p><strong>Exemplo Prático:</strong> Uma placa-mãe com suporte a overclocking permite que usuários avançados aumentem a frequência de operação da CPU e da RAM, obtendo melhor desempenho em tarefas intensivas.</p>
+            </div>
+        </li>
+        <li>
+            <strong class="topic-header">Placa de Vídeo (GPU)</strong>
+            <div class="topic-content">
+                <p>
+                    A Unidade de Processamento Gráfico (GPU) é especializada em processamento paralelo massivo, ideal para renderização gráfica e cálculos matemáticos intensivos. GPUs dedicadas são essenciais para jogos, modelagem 3D, edição de vídeo e aplicações de aprendizado de máquina. As GPUs podem ser integradas (onboard) ou dedicadas (placas gráficas separadas).
+                </p>
+                <p><strong>Exemplo Prático:</strong> Uma GPU NVIDIA GeForce RTX 3080 permite jogar os títulos mais recentes em alta resolução com configurações gráficas no máximo, além de acelerar tarefas como renderização de vídeo e treinamento de modelos de inteligência artificial.</p>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!-- Script para expandir/ocultar conteúdo -->
+<script>
+    // Seleciona todos os elementos com a classe 'topic-header'
+    var headers = document.getElementsByClassName('topic-header');
+
+    for (var i = 0; i < headers.length; i++) {
+        headers[i].addEventListener('click', function() {
+            // Encontra o próximo elemento irmão (sibling), que é o 'topic-content'
+            var content = this.nextElementSibling;
+            // Alterna a exibição do conteúdo
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+            } else {
+                content.style.display = 'block';
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aula 01 - Slide 5</title>
+    <meta charset="UTF-8">
+    <!-- Importa o w3.css para estilos -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .topic-header {
+            cursor: pointer;
+            user-select: none;
+        }
+        .topic-content {
+            display: none;
+            margin-left: 20px;
+        }
+        /* Estilo opcional para indicar que o item é clicável */
+        .topic-header:hover {
+            color: #1e90ff;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navegação entre Slides no topo -->
+<div class="w3-center w3-margin-top">
+    <a href="aula01-topico-4.html" class="w3-button w3-blue w3-round">&#10094; Anterior</a>
+    <a href="aula01-topico-6.html" class="w3-button w3-blue w3-round">Próximo &#10095;</a>
+</div>
+
+<div class="w3-container">
+    <h2 class="w3-text-indigo">2. Sistemas Operacionais</h2>
+    <h3 class="w3-text-orange">2.1. Funções Principais</h3>
+    <ul class="w3-ul w3-leftbar w3-border-orange">
+        <li>
+            <strong class="topic-header">Gerenciamento de Processos</strong>
+            <div class="topic-content">
+                <p>
+                    O sistema operacional é responsável por criar, agendar e finalizar processos. Ele gerencia a execução de múltiplos programas simultaneamente, garantindo que cada processo receba tempo suficiente de CPU para funcionar corretamente. Isso inclui a troca de contexto entre processos, sincronização e comunicação entre processos. O sistema operacional também lida com threads, que são subunidades de processos, permitindo multitarefa e melhor utilização dos recursos do sistema.
+                </p>
+                <p><strong>Exemplo Prático:</strong> Quando você está ouvindo música enquanto navega na internet, o sistema operacional gerencia ambos os processos para que funcionem simultaneamente sem interferências.</p>
+            </div>
+        </li>
+        <li>
+            <strong class="topic-header">Gerenciamento de Memória</strong>
+            <div class="topic-content">
+                <p>
+                    Este componente gerencia a alocação e liberação de memória para processos em execução. Ele mantém o controle de quais partes da memória estão sendo utilizadas e por quais processos, além de decidir quais processos terão memória alocada ou liberada. O gerenciamento de memória inclui técnicas como paginação, segmentação e memória virtual, que permitem que o sistema operacional forneça a ilusão de uma grande memória contínua, mesmo que a memória física seja limitada.
+                </p>
+                <p><strong>Exemplo Prático:</strong> Ao abrir vários aplicativos em um computador com memória limitada, o sistema operacional pode usar memória virtual para continuar operando, movendo dados menos usados para o disco rígido temporariamente.</p>
+            </div>
+        </li>
+        <li>
+            <strong class="topic-header">Gerenciamento de Armazenamento</strong>
+            <div class="topic-content">
+                <p>
+                    O sistema operacional gerencia a leitura e escrita de dados em dispositivos de armazenamento, como discos rígidos e SSDs. Ele organiza os dados em estruturas chamadas sistemas de arquivos, permitindo que os usuários criem, modifiquem e excluam arquivos e diretórios. Além disso, lida com a segurança e permissões de acesso aos arquivos, garantindo a integridade e confidencialidade dos dados armazenados.
+                </p>
+                <p><strong>Exemplo Prático:</strong> Quando você salva um documento no computador, o sistema operacional determina onde os dados serão armazenados no disco e atualiza o sistema de arquivos adequadamente.</p>
+            </div>
+        </li>
+        <li>
+            <strong class="topic-header">Gerenciamento de Dispositivos</strong>
+            <div class="topic-content">
+                <p>
+                    Controla a interação com dispositivos de hardware periféricos. O sistema operacional utiliza drivers para se comunicar com dispositivos como impressoras, placas de som, placas de vídeo e dispositivos USB. Isso permite que os aplicativos acessem hardware sem precisar conhecer detalhes específicos de cada dispositivo, promovendo a compatibilidade e facilitando a adição de novos dispositivos ao sistema.
+                </p>
+                <p><strong>Exemplo Prático:</strong> Ao conectar um novo mouse ao computador, o sistema operacional carrega o driver apropriado para que o dispositivo funcione corretamente sem a necessidade de configuração manual.</p>
+            </div>
+        </li>
+        <li>
+            <strong class="topic-header">Interface com o Usuário</strong>
+            <div class="topic-content">
+                <p>
+                    Fornece meios para que os usuários interajam com o sistema operacional e executem tarefas. Isso pode ser feito através de uma Interface de Linha de Comando (CLI), onde comandos são inseridos via texto, ou uma Interface Gráfica de Usuário (GUI), que utiliza elementos visuais como janelas, ícones e menus. A interface com o usuário é essencial para a usabilidade do sistema, permitindo que usuários de diferentes níveis de experiência utilizem o computador de forma eficiente.
+                </p>
+                <p><strong>Exemplo Prático:</strong> O ambiente de trabalho do Windows, com sua área de trabalho, menu Iniciar e barra de tarefas, é uma interface gráfica que permite aos usuários acessar facilmente aplicativos e configurações.</p>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!-- Script para expandir/ocultar conteúdo -->
+<script>
+    // Seleciona todos os elementos com a classe 'topic-header'
+    var headers = document.getElementsByClassName('topic-header');
+
+    for (var i = 0; i < headers.length; i++) {
+        headers[i].addEventListener('click', function() {
+            // Encontra o próximo elemento irmão (sibling), que é o 'topic-content'
+            var content = this.nextElementSibling;
+            // Alterna a exibição do conteúdo
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+            } else {
+                content.style.display = 'block';
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

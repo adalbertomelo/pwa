@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aula 01 - Slide 15</title>
+    <meta charset="UTF-8">
+    <!-- Importa o w3.css para estilos -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .topic-header {
+            cursor: pointer;
+            user-select: none;
+        }
+        .topic-content {
+            display: none;
+            margin-left: 20px;
+        }
+        /* Estilo opcional para indicar que o item é clicável */
+        .topic-header:hover {
+            color: #1e90ff;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navegação entre Slides no topo -->
+<div class="w3-center w3-margin-top">
+    <a href="aula01-topico-14.html" class="w3-button w3-blue w3-round">&#10094; Anterior</a>
+    <a href="aula01-topico-16.html" class="w3-button w3-blue w3-round">Próximo &#10095;</a>
+</div>
+
+<div class="w3-container">
+    <h2 class="w3-text-indigo">8. Segurança em Sistemas Computacionais</h2>
+
+    <h3 class="w3-text-teal">8.1. Princípios Básicos</h3>
+    <ul class="w3-ul w3-leftbar w3-border-teal">
+        <li>
+            <strong class="topic-header">Confidencialidade</strong>
+            <div class="topic-content">
+                <p>
+                    A <strong>Confidencialidade</strong> garante que informações sensíveis não sejam acessadas por indivíduos não autorizados. É um dos pilares da segurança da informação.
+                </p>
+                <p><strong>Métodos para Garantir Confidencialidade:</strong></p>
+                <ul>
+                    <li>Controle de acesso rigoroso.</li>
+                    <li>Criptografia de dados em trânsito e em repouso.</li>
+                    <li>Políticas de senha fortes.</li>
+                </ul>
+                <p><strong>Exemplo Prático:</strong> O uso de HTTPS para garantir que dados transmitidos entre um navegador e um servidor web permaneçam confidenciais.</p>
+            </div>
+        </li>
+        <li>
+            <strong class="topic-header">Integridade</strong>
+            <div class="topic-content">
+                <p>
+                    A <strong>Integridade</strong> assegura que os dados não sejam alterados ou corrompidos de maneira não autorizada ou acidental.
+                </p>
+                <p><strong>Métodos para Garantir Integridade:</strong></p>
+                <ul>
+                    <li>Uso de somas de verificação (checksums) e hashes.</li>
+                    <li>Controles de versão e backups regulares.</li>
+                    <li>Assinaturas digitais.</li>
+                </ul>
+                <p><strong>Exemplo Prático:</strong> O uso de algoritmos de hash como SHA-256 para verificar se um arquivo baixado não foi corrompido.</p>
+            </div>
+        </li>
+        <li>
+            <strong class="topic-header">Disponibilidade</strong>
+            <div class="topic-content">
+                <p>
+                    A <strong>Disponibilidade</strong> garante que os sistemas e dados estejam acessíveis aos usuários autorizados sempre que necessário.
+                </p>
+                <p><strong>Métodos para Garantir Disponibilidade:</strong></p>
+                <ul>
+                    <li>Implementação de redundância e balanceamento de carga.</li>
+                    <li>Proteção contra ataques de negação de serviço (DoS/DDoS).</li>
+                    <li>Planos de recuperação de desastres.</li>
+                </ul>
+                <p><strong>Exemplo Prático:</strong> Uso de servidores redundantes em diferentes locais para assegurar o funcionamento contínuo de um serviço web.</p>
+            </div>
+        </li>
+    </ul>
+
+    <h3 class="w3-text-teal">8.2. Ameaças Comuns</h3>
+    <ul class="w3-ul w3-leftbar w3-border-teal">
+        <li>
+			<!-- Malware -->
+			<strong class="topic-header">Malware</strong>
+			<div class="topic-content">
+				<p>
+					<strong>Definição:</strong> Software malicioso projetado para danificar, interromper ou obter acesso não autorizado a sistemas.
+				</p>
+				<p><strong>Tipos de Malware:</strong></p>
+				<ul>
+					<li><strong>Vírus</strong>: Programas que se replicam inserindo cópias de si mesmos em outros programas ou arquivos.</li>
+					<li><strong>Worms</strong>: Malware que se replica e se espalha automaticamente pela rede sem necessidade de hospedeiro.</li>
+					<li><strong>Trojans</strong>: Programas que parecem legítimos, mas executam ações maliciosas quando executados.</li>
+					<li><strong>Spyware</strong>: Coleta informações sobre o usuário sem seu conhecimento.</li>
+					<li><strong>Ransomware</strong>: Criptografa os dados do usuário e exige resgate para liberá-los.</li>
+				</ul>
+				<p><strong>Métodos de Infecção:</strong></p>
+				<ul>
+					<li>Downloads maliciosos.</li>
+					<li>Anexos de e-mail infectados.</li>
+					<li>Dispositivos USB comprometidos.</li>
+					<li>Exploits em software vulnerável.</li>
+				</ul>
+				<p><strong>Prevenção e Remoção:</strong></p>
+				<ul>
+					<li>Uso de antivírus e anti-malware atualizados.</li>
+					<li>Práticas seguras de navegação e abertura de e-mails.</li>
+					<li>Atualização regular de sistemas e aplicativos para corrigir vulnerabilidades.</li>
+				</ul>
+				<p><strong>Exemplo Prático:</strong> Um ransomware criptografa os arquivos de um usuário e exige pagamento para liberá-los.</p>
+			</div>
+        </li>
+        <li>
+            <strong class="topic-header">Ataques de Força Bruta</strong>
+            <div class="topic-content">
+                <p>
+                    Em <strong>Ataques de Força Bruta</strong>, o invasor tenta adivinhar senhas ou chaves criptográficas através de tentativas exaustivas.
+                </p>
+                <p><strong>Formas de Proteção:</strong></p>
+                <ul>
+                    <li>Utilizar senhas fortes e complexas.</li>
+                    <li>Implementar bloqueio de contas após múltiplas tentativas falhas.</li>
+                    <li>Usar autenticação multifator (MFA).</li>
+                </ul>
+                <p><strong>Exemplo Prático:</strong> Um script automatizado tenta várias combinações de senha para acessar uma conta de usuário.</p>
+            </div>
+        </li>
+        <!-- Ataques de Rede -->
+        <li>
+            <strong class="topic-header">Ataques de Rede</strong>
+            <div class="topic-content">
+                <!-- DDoS -->
+                <strong class="subtopic-header">DDoS (Distributed Denial of Service)</strong>
+                <div class="subtopic-content">
+                    <p>
+                        Ataque que visa tornar um sistema indisponível sobrecarregando-o com tráfego de múltiplas fontes.
+                    </p>
+                    <p><strong>Mitigação:</strong></p>
+                    <ul>
+                        <li>Uso de firewalls.</li>
+                        <li>Sistemas de detecção e prevenção de intrusão.</li>
+                        <li>Serviços de mitigação DDoS.</li>
+                    </ul>
+                </div>
+                <!-- Sniffing -->
+                <strong class="subtopic-header">Sniffing</strong>
+                <div class="subtopic-content">
+                    <p>
+                        Captura de dados que trafegam na rede.
+                    </p>
+                    <p><strong>Proteção:</strong></p>
+                    <ul>
+                        <li>Criptografia de dados em trânsito (SSL/TLS, VPNs).</li>
+                        <li>Redes segmentadas e seguras.</li>
+                    </ul>
+                </div>
+                <!-- Spoofing -->
+                <strong class="subtopic-header">Spoofing</strong>
+                <div class="subtopic-content">
+                    <p>
+                        Fingir ser outra entidade na rede para enganar sistemas ou usuários.
+                    </p>
+                    <p><strong>Tipos:</strong></p>
+                    <ul>
+                        <li><strong>IP Spoofing</strong>: Falsificação de endereço IP.</li>
+                        <li><strong>ARP Spoofing</strong>: Envenenamento de tabelas ARP para interceptar tráfego.</li>
+                    </ul>
+                    <p><strong>Contramedidas:</strong></p>
+                    <ul>
+                        <li>Uso de protocolos seguros.</li>
+                        <li>Implementação de filtros e verificação de autenticidade.</li>
+                    </ul>
+                </div>
+                <!-- Phishing -->
+                <strong class="subtopic-header">Phishing</strong>
+                <div class="subtopic-content">
+                    <p>
+                        Enganar usuários para que revelem informações confidenciais.
+                    </p>
+                    <p><strong>Prevenção:</strong></p>
+                    <ul>
+                        <li>Educação do usuário.</li>
+                        <li>Filtros anti-phishing em navegadores e clientes de e-mail.</li>
+                        <li>Verificação de URLs e certificados de segurança.</li>
+                    </ul>
+                    <p><strong>Exemplo Prático:</strong> Um e-mail falso que aparenta ser do banco, solicitando que o usuário atualize suas informações de conta.</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!-- Script para expandir/ocultar conteúdo -->
+<script>
+    // Seleciona todos os elementos com a classe 'topic-header'
+    var headers = document.getElementsByClassName('topic-header');
+
+    for (var i = 0; i < headers.length; i++) {
+        headers[i].addEventListener('click', function() {
+            // Encontra o próximo elemento irmão, que é o 'topic-content'
+            var content = this.nextElementSibling;
+            // Alterna a exibição do conteúdo
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+            } else {
+                content.style.display = 'block';
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

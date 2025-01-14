@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aula 01 - Slide 13</title>
+    <meta charset="UTF-8">
+    <!-- Importa o w3.css para estilos -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .topic-header {
+            cursor: pointer;
+            user-select: none;
+        }
+        .topic-content {
+            display: none;
+            margin-left: 20px;
+        }
+        /* Estilo opcional para indicar que o item é clicável */
+        .topic-header:hover {
+            color: #1e90ff;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navegação entre Slides no topo -->
+<div class="w3-center w3-margin-top">
+    <a href="aula01-topico-12.html" class="w3-button w3-blue w3-round">&#10094; Anterior</a>
+    <a href="aula01-topico-14.html" class="w3-button w3-blue w3-round">Próximo &#10095;</a>
+</div>
+
+<div class="w3-container">
+    <h2 class="w3-text-indigo">6. Sistemas de Entrada/Saída</h2>
+    <h3 class="w3-text-green">6.1. Gerenciamento de Dispositivos</h3>
+    <ul class="w3-ul w3-leftbar w3-border-green">
+        <li>
+            <strong class="topic-header">Tipos de Dispositivos de E/S</strong>
+            <div class="topic-content">
+                <p>
+                    Os dispositivos de Entrada/Saída (E/S) permitem a comunicação entre o sistema computacional e o ambiente externo. Eles podem ser classificados em:
+                </p>
+                <ul>
+                    <li><strong>Dispositivos de Bloqueio (Block Devices)</strong>:
+                        <p>
+                            - Transferem dados em blocos fixos.<br>
+                            - Exemplo: Discos rígidos, SSDs.
+                        </p>
+                    </li>
+                    <li><strong>Dispositivos de Caracteres (Character Devices)</strong>:
+                        <p>
+                            - Transferem dados byte a byte.<br>
+                            - Exemplo: Teclados, mouses, portas seriais.
+                        </p>
+                    </li>
+                    <li><strong>Dispositivos de Rede</strong>:
+                        <p>
+                            - Permitem comunicação em rede.<br>
+                            - Exemplo: Placas de rede Ethernet, Wi-Fi.
+                        </p>
+                    </li>
+                </ul>
+                <p>
+                    A compreensão dos tipos de dispositivos é fundamental para o gerenciamento eficiente de E/S.
+                </p>
+                <p><strong>Exemplo Prático:</strong> Um sistema operacional utiliza drivers específicos para gerenciar dispositivos de bloqueio e dispositivos de caracteres de forma adequada.</p>
+            </div>
+        </li>
+        <li>
+            <strong class="topic-header">Drivers de Dispositivos</strong>
+            <div class="topic-content">
+                <p>
+                    Os <strong>Drivers de Dispositivos</strong> são componentes de software que permitem ao sistema operacional se comunicar com dispositivos de hardware.
+                </p>
+                <p><strong>Funções dos Drivers:</strong></p>
+                <ul>
+                    <li>Abstrair as peculiaridades do hardware para o sistema operacional.</li>
+                    <li>Fornecer interfaces padronizadas para operações de E/S.</li>
+                    <li>Gerenciar recursos e estados dos dispositivos.</li>
+                </ul>
+                <p><strong>Tipos de Drivers:</strong></p>
+                <ul>
+                    <li><strong>Drivers em Modo Usuário</strong>: Executam no espaço do usuário, oferecendo maior segurança, mas com potencial perda de desempenho.</li>
+                    <li><strong>Drivers em Modo Kernel</strong>: Executam no espaço do kernel, oferecendo maior desempenho, mas com risco maior de afetar a estabilidade do sistema.</li>
+                </ul>
+                <p>
+                    A gestão eficiente dos drivers é crucial para a estabilidade e desempenho do sistema operacional.
+                </p>
+                <p><strong>Exemplo Prático:</strong> Atualizações de drivers de placa de vídeo podem melhorar o desempenho gráfico e corrigir problemas de compatibilidade.</p>
+            </div>
+        </li>
+        <li>
+            <strong class="topic-header">Gerenciamento de E/S</strong>
+            <div class="topic-content">
+                <p>
+                    O sistema operacional gerencia as operações de E/S para otimizar o desempenho e assegurar a correta operação dos dispositivos.
+                </p>
+                <p><strong>Métodos de Transferência:</strong></p>
+                <ul>
+                    <li><strong>Programmed I/O</strong>: A CPU controla diretamente as operações de E/S, verificando constantemente o status do dispositivo.</li>
+                    <li><strong>Interrupções</strong>: O dispositivo sinaliza à CPU quando está pronto para transferência, liberando a CPU para outras tarefas.</li>
+                    <li><strong>DMA (Direct Memory Access)</strong>: O controlador de DMA gerencia a transferência de dados entre a memória e o dispositivo, minimizando a intervenção da CPU.</li>
+                </ul>
+                <p><strong>Gerenciamento de Buffering:</strong></p>
+                <ul>
+                    <li>Uso de buffers para armazenar temporariamente dados durante operações de E/S.</li>
+                    <li>Reduz discrepâncias de velocidade entre dispositivos e a CPU.</li>
+                </ul>
+                <p>
+                    O gerenciamento adequado de E/S melhora a eficiência geral do sistema e a experiência do usuário.
+                </p>
+                <p><strong>Exemplo Prático:</strong> Durante a leitura de um arquivo grande, o sistema operacional utiliza buffering e DMA para otimizar a transferência de dados do disco para a memória.</p>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!-- Script para expandir/ocultar conteúdo -->
+<script>
+    // Seleciona todos os elementos com a classe 'topic-header'
+    var headers = document.getElementsByClassName('topic-header');
+
+    for (var i = 0; i < headers.length; i++) {
+        headers[i].addEventListener('click', function() {
+            // Encontra o próximo elemento irmão, que é o 'topic-content'
+            var content = this.nextElementSibling;
+            // Alterna a exibição do conteúdo
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+            } else {
+                content.style.display = 'block';
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Aula 01 - Slide 9</title>
+    <meta charset="UTF-8">
+    <!-- Importa o w3.css para estilos -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        .topic-header {
+            cursor: pointer;
+            user-select: none;
+        }
+        .topic-content {
+            display: none;
+            margin-left: 20px;
+        }
+        /* Estilo opcional para indicar que o item é clicável */
+        .topic-header:hover {
+            color: #1e90ff;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navegação entre Slides no topo -->
+<div class="w3-center w3-margin-top">
+    <a href="aula01-topico-8.html" class="w3-button w3-blue w3-round">&#10094; Anterior</a>
+    <a href="aula01-topico-10.html" class="w3-button w3-blue w3-round">Próximo &#10095;</a>
+</div>
+
+<div class="w3-container">
+    <h2 class="w3-text-indigo">4. Gerenciamento de Memória</h2>
+    <h3 class="w3-text-red">4.1. Memória Virtual</h3>
+    <ul class="w3-ul w3-leftbar w3-border-red">
+        <li>
+            <strong class="topic-header">Paginação</strong>
+            <div class="topic-content">
+                <p>
+                    <strong>Paginação</strong> é uma técnica que permite que o espaço de endereçamento de um processo seja não contíguo, facilitando a alocação de memória e eliminando a fragmentação externa.
+                </p>
+                <p><strong>Funcionamento:</strong></p>
+                <ul>
+                    <li>A memória lógica é dividida em <strong>páginas</strong> de tamanho fixo.</li>
+                    <li>A memória física é dividida em <strong>molduras</strong> ou <strong>quadros</strong> do mesmo tamanho.</li>
+                    <li>Uma <strong>tabela de páginas</strong> mantém o mapeamento entre páginas e molduras.</li>
+                    <li>Quando um processo é executado, suas páginas são carregadas em molduras disponíveis.</li>
+                </ul>
+                <p><strong>Vantagens:</strong></p>
+                <ul>
+                    <li>Elimina a fragmentação externa.</li>
+                    <li>Permite uso eficiente da memória.</li>
+                    <li>Facilita a implementação de memória virtual, permitindo que processos utilizem mais memória do que a disponível fisicamente.</li>
+                </ul>
+                <p><strong>Desafios:</strong></p>
+                <ul>
+                    <li><strong>Fragmentação Interna</strong>: A última página pode não estar totalmente preenchida.</li>
+                    <li><strong>Overhead</strong>: Necessidade de tabelas de páginas e mecanismos de tradução de endereços.</li>
+                </ul>
+                <p><strong>Memória Virtual:</strong></p>
+                <ul>
+                    <li>Páginas não utilizadas recentemente podem ser movidas para o disco.</li>
+                    <li>Quando acessadas novamente, ocorre uma <strong>page fault</strong>, e a página é trazida de volta para a memória.</li>
+                    <li><strong>Algoritmos de Substituição de Páginas</strong>: FIFO, LRU (Least Recently Used), LFU (Least Frequently Used).</li>
+                </ul>
+                <p>
+                    A paginação aumenta a flexibilidade e eficiência do gerenciamento de memória.
+                </p>
+                <p><strong>Exemplo Prático:</strong> Em sistemas operacionais modernos, como o Windows e o Linux, a paginação é usada para permitir que múltiplos programas sejam executados simultaneamente sem que haja conflito direto pela memória física limitada.</p>
+            </div>
+        </li>
+        <li>
+            <strong class="topic-header">Segmentação</strong>
+            <div class="topic-content">
+                <p>
+                    <strong>Segmentação</strong> divide a memória lógica em segmentos de tamanhos variáveis, correspondendo a estruturas lógicas do programa, como funções, variáveis globais, pilha, etc.
+                </p>
+                <p><strong>Funcionamento:</strong></p>
+                <ul>
+                    <li>Cada segmento tem um nome e um comprimento.</li>
+                    <li>Um endereço lógico consiste em um par (número do segmento, deslocamento).</li>
+                    <li>Uma <strong>tabela de segmentos</strong> armazena a base e o limite de cada segmento.</li>
+                    <li>O sistema verifica se o deslocamento está dentro dos limites antes de acessar a memória.</li>
+                </ul>
+                <p><strong>Vantagens:</strong></p>
+                <ul>
+                    <li>Reflete a estrutura lógica do programa.</li>
+                    <li>Facilita proteção e compartilhamento de segmentos específicos entre processos.</li>
+                    <li>Pode reduzir a fragmentação interna.</li>
+                </ul>
+                <p><strong>Desafios:</strong></p>
+                <ul>
+                    <li><strong>Fragmentação Externa</strong>: Segmentos de tamanhos variados podem deixar espaços não utilizados na memória.</li>
+                    <li>Complexidade na alocação de memória contígua para segmentos grandes.</li>
+                </ul>
+                <p><strong>Segmentação com Paginação:</strong></p>
+                <ul>
+                    <li>Combina as duas técnicas para aproveitar as vantagens de ambas.</li>
+                    <li>Cada segmento é paginado, permitindo alocação não contígua e reduzindo fragmentação externa.</li>
+                </ul>
+                <p>
+                    A segmentação oferece uma visão mais natural da memória para o programador, alinhada com a estrutura do código fonte.
+                </p>
+                <p><strong>Exemplo Prático:</strong> Linguagens como C permitem a separação lógica do código em funções e módulos; a segmentação alinha essa estrutura lógica com a memória física, facilitando o desenvolvimento e depuração.</p>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<!-- Script para expandir/ocultar conteúdo -->
+<script>
+    // Seleciona todos os elementos com a classe 'topic-header'
+    var headers = document.getElementsByClassName('topic-header');
+
+    for (var i = 0; i < headers.length; i++) {
+        headers[i].addEventListener('click', function() {
+            // Encontra o próximo elemento irmão, que é o 'topic-content'
+            var content = this.nextElementSibling;
+            // Alterna a exibição do conteúdo
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+            } else {
+                content.style.display = 'block';
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

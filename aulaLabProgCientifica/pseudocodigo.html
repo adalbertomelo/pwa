@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula: Pseudocódigo de Algoritmos</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .example-code {
+            background-color: #f1f1f1;
+            padding: 15px;
+            border-left: 4px solid #4CAF50;
+            margin-bottom: 20px;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .activity {
+            background-color: #ffebcc;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="w3-container w3-teal">
+        <h1 class="w3-center">Pseudocódigo de Algoritmos</h1>
+    </header>
+
+    <div class="container">
+
+        <section>
+            <h2>Objetivos</h2>
+            <ul class="w3-ul w3-border">
+                <li>Introduzir o conceito e a importância do pseudocódigo.</li>
+                <li>Demonstrar como construir um pseudocódigo claro e preciso.</li>
+                <li>Apresentar exemplos práticos de pseudocódigo em diferentes tipos de algoritmos.</li>
+                <li>Explorar as boas práticas na escrita de pseudocódigo.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>1. Introdução ao Pseudocódigo</h2>
+            <p><b>Pseudocódigo</b> é uma forma de descrever algoritmos em linguagem natural e informal, facilitando o planejamento e entendimento dos passos necessários para resolver um problema, sem se preocupar com a sintaxe de uma linguagem de programação específica.</p>
+            <p>O pseudocódigo é útil porque:</p>
+            <ul class="w3-ul w3-border">
+                <li>Facilita a <b>compreensão</b> dos algoritmos.</li>
+                <li>Ajuda a <b>comunicar</b> ideias de forma clara.</li>
+                <li>É uma ferramenta útil para <b>documentação</b> de soluções.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>2. Estrutura Básica de um Pseudocódigo</h2>
+            <ul class="w3-ul w3-border">
+                <li><b>Entrada:</b> Dados que o algoritmo recebe.</li>
+                <li><b>Processamento:</b> Operações realizadas nos dados.</li>
+                <li><b>Saída:</b> O resultado final após o processamento.</li>
+            </ul>
+
+            <div class="example-code">
+                <b>Exemplo 1:</b> Pseudocódigo para somar dois números.
+                <pre>
+Início
+    Leia o primeiro número (A)
+    Leia o segundo número (B)
+    Some A e B e armazene o resultado em C
+    Exiba o valor de C
+Fim
+                </pre>
+            </div>
+        </section>
+
+        <section>
+            <h2>3. Estruturas de Controle no Pseudocódigo</h2>
+            <p>As principais estruturas de controle usadas em pseudocódigo são as condicionais e os laços (loops). Elas são essenciais para tomar decisões e realizar repetições dentro dos algoritmos.</p>
+
+            <h3>3.1 Decisões Condicionais</h3>
+            <p>Permitem ao algoritmo tomar diferentes ações dependendo de uma condição.</p>
+            <div class="example-code">
+                <b>Exemplo 2:</b> Verificar se um número é par ou ímpar.
+                <pre>
+Início
+    Leia um número (N)
+    Se N mod 2 = 0 então
+        Exiba "Par"
+    Senão
+        Exiba "Ímpar"
+Fim
+                </pre>
+            </div>
+
+            <h3>3.2 Laços (Loops)</h3>
+            <p>Os laços permitem que o algoritmo repita certos passos até que uma condição seja atingida.</p>
+            <div class="example-code">
+                <b>Exemplo 3:</b> Somar os primeiros N números naturais.
+                <pre>
+Início
+    Leia N
+    Soma <- 0
+    Para i de 1 até N faça
+        Soma <- Soma + i
+    FimPara
+    Exiba "Soma dos números naturais é", Soma
+Fim
+                </pre>
+            </div>
+        </section>
+
+        <section>
+            <h2>4. Boas Práticas na Escrita de Pseudocódigo</h2>
+            <ul class="w3-ul w3-border">
+                <li><b>Clareza:</b> Utilize nomes de variáveis descritivos e frases simples.</li>
+                <li><b>Consistência:</b> Mantenha uma estrutura de controle clara e uniforme.</li>
+                <li><b>Generalidade:</b> O pseudocódigo deve ser flexível e aplicável em diferentes linguagens de programação.</li>
+                <li><b>Nível de Detalhe:</b> Inclua detalhes suficientes para ser compreensível, sem se preocupar com aspectos de implementação específicos.</li>
+            </ul>
+
+            <div class="example-code">
+                <b>Exemplo 4:</b> Pseudocódigo para calcular o fatorial de um número.
+                <pre>
+Início
+    Leia N
+    Fatorial <- 1
+    Para i de 1 até N faça
+        Fatorial <- Fatorial * i
+    FimPara
+    Exiba "O fatorial de", N, "é", Fatorial
+Fim
+                </pre>
+            </div>
+        </section>
+
+        <section>
+            <h2>5. Exemplos Práticos de Pseudocódigo</h2>
+
+            <div class="example-code">
+                <b>Exemplo 5:</b> Algoritmo de Busca Sequencial.
+                <pre>
+Início
+    Leia um número alvo
+    Leia uma lista de números (Lista)
+    Para cada elemento da Lista faça
+        Se o elemento for igual ao alvo então
+            Exiba "Número encontrado"
+            Pare
+        FimSe
+    FimPara
+    Se o número não foi encontrado então
+        Exiba "Número não encontrado"
+Fim
+                </pre>
+            </div>
+
+            <div class="example-code">
+                <b>Exemplo 6:</b> Algoritmo de Ordenação Bubble Sort.
+                <pre>
+Início
+    Leia uma lista de números (Lista)
+    Para cada elemento da lista faça
+        Para cada elemento até o penúltimo da lista faça
+            Se o elemento atual for maior que o próximo então
+                Troque os dois elementos
+            FimSe
+        FimPara
+    FimPara
+    Exiba a lista ordenada
+Fim
+                </pre>
+            </div>
+        </section>
+
+        <section>
+            <h2>6. Atividades Práticas</h2>
+
+            <div class="activity">
+                <b>Atividade 1:</b> Escreva um pseudocódigo que receba uma lista de números e encontre o menor valor da lista.
+            </div>
+
+            <div class="activity">
+                <b>Atividade 2:</b> Desenvolva um pseudocódigo que receba a idade de várias pessoas e exiba a média de idade.
+            </div>
+
+            <div class="activity">
+                <b>Atividade 3:</b> Escreva um pseudocódigo para calcular a soma de todos os números pares entre 1 e 100.
+            </div>
+
+            <div class="activity">
+                <b>Atividade 4:</b> Crie um pseudocódigo que receba um número inteiro e verifique se ele é primo.
+            </div>
+
+            <div class="activity">
+                <b>Atividade 5:</b> Crie um pseudocódigo que resolva o problema do troco, dado o valor da compra e o valor pago.
+            </div>
+        </section>
+
+        <section>
+            <h2>7. Conclusão</h2>
+            <p>O pseudocódigo é uma ferramenta poderosa para planejar algoritmos e comunicar soluções de forma clara. Ele deve ser escrito com precisão, para facilitar sua tradução em qualquer linguagem de programação. Com a prática, você será capaz de resolver problemas complexos usando pseudocódigo de maneira eficiente.</p>
+        </section>
+
+        <footer class="w3-container w3-teal w3-center">
+            <p>&copy; 2024 - Programação Científica - IFPA Campus Ananindeua</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
