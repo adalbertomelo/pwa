@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula: Variáveis Estruturadas Multidimensionais Homogêneas</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            background-color: #009688;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .container {
+            margin: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            color: #009688;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        .code {
+            background: #f1f1f1;
+            padding: 10px;
+            border-left: 4px solid #009688;
+            overflow-x: auto;
+            margin: 15px 0;
+            font-family: monospace;
+        }
+        .exercise {
+            background-color: #e0f7fa;
+            border-left: 4px solid #009688;
+            padding: 10px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Aula: Problemas Envolvendo Variáveis Estruturadas Multidimensionais Homogêneas</h1>
+</div>
+
+<div class="container w3-animate-opacity">
+
+    <h2 class="section-title">Objetivos da Aula</h2>
+    <ul>
+        <li>Entender o conceito de variáveis estruturadas multidimensionais homogêneas (matrizes).</li>
+        <li>Aprender a resolver problemas que envolvem matrizes.</li>
+        <li>Aplicar operações básicas como soma, subtração, transposição e multiplicação de matrizes.</li>
+        <li>Implementar soluções em linguagens de programação, como Python ou MATLAB.</li>
+    </ul>
+
+    <h2 class="section-title">Introdução</h2>
+    <p>Uma variável estruturada multidimensional homogênea é uma coleção de dados do mesmo tipo organizada em duas ou mais dimensões. Exemplos comuns incluem matrizes usadas em problemas como manipulação de imagens, simulações matemáticas e algoritmos.</p>
+
+    <h2 class="section-title">Problemas Comuns com Matrizes</h2>
+
+    <h3>Soma de Matrizes</h3>
+    <p>Exemplo de soma de matrizes:</p>
+    <div class="code">
+        A = [[1, 2], [3, 4]]<br>
+        B = [[5, 6], [7, 8]]<br>
+        Soma: A + B = [[6, 8], [10, 12]]
+    </div>
+
+    <h3>Subtração de Matrizes</h3>
+    <p>Exemplo de subtração de matrizes:</p>
+    <div class="code">
+        A = [[9, 8], [7, 6]]<br>
+        B = [[5, 4], [3, 2]]<br>
+        Subtração: A - B = [[4, 4], [4, 4]]
+    </div>
+
+    <h3>Transposição de Matrizes</h3>
+    <p>Exemplo de transposição de uma matriz:</p>
+    <div class="code">
+        A = [[1, 2, 3], [4, 5, 6]]<br>
+        Transposta: [[1, 4], [2, 5], [3, 6]]
+    </div>
+
+    <h3>Multiplicação de Matrizes</h3>
+    <p>Exemplo de multiplicação de matrizes:</p>
+    <div class="code">
+        A = [[1, 2], [3, 4]]<br>
+        B = [[2, 0], [1, 3]]<br>
+        Resultado: A * B = [[4, 6], [10, 12]]
+    </div>
+
+    <h2 class="section-title">Exercícios Práticos</h2>
+
+    <div class="exercise">
+        <p><strong>Exercício 1:</strong> Implemente um programa que receba duas matrizes 2x2 e calcule a soma e subtração delas.</p>
+    </div>
+
+    <div class="exercise">
+        <p><strong>Exercício 2:</strong> Multiplique as matrizes abaixo:</p>
+        <p>
+        C = [[1, 3, 2], [4, 0, 1]]<br>
+        D = [[2, 1], [3, 4], [1, 0]]
+        </p>
+    </div>
+
+	<div class="exercise">
+        <p><strong>Exercício 3:</strong> Em um mapa representado por uma matriz 5x5, onde os elementos indicam se o caminho entre dois pontos é transitável (1) ou bloqueado (0), bloqueie a rota entre os pontos (2, 2) e (3, 3). Liste os pontos transitaveis.</p>
+        <p>Exemplo da matriz inicial:</p>
+        <div class="code">
+        Mapa = [[1, 1, 1, 1, 1],<br>
+                [1, 1, 1, 1, 1],<br>
+                [1, 1, 1, 1, 1],<br>
+                [1, 1, 1, 1, 1],<br>
+                [1, 1, 1, 1, 1]]
+        </div>
+        <p>Após o bloqueio:</p>
+        <div class="code">
+        Mapa = [[1, 1, 1, 1, 1],<br>
+                [1, 1, 1, 1, 1],<br>
+                [1, 1, 0, 1, 1],<br>
+                [1, 1, 1, 0, 1],<br>
+                [1, 1, 1, 1, 1]]
+        </div>
+    </div>
+	
+    <div class="exercise">
+        <p><strong>Exercício 5:</strong> Imagine uma pequena cidade com as seguintes ruas e cruzamentos:</p>
+        <ul>
+            <li><strong>Rua A</strong> (vai do ponto 1 ao 5):</li>
+            <ul>
+                <li>Interseções com Rua B no ponto 2.</li>
+                <li>Interseções com Rua C no ponto 4.</li>
+                <li>Termina no ponto 5 (rua sem saída).</li>
+            </ul>
+            <li><strong>Rua B</strong> (vai do ponto 2 ao 6):</li>
+            <ul>
+                <li>Interseções com Rua A no ponto 2.</li>
+                <li>Interseções com Rua D no ponto 3.</li>
+                <li>Termina no ponto 6 (rua sem saída).</li>
+            </ul>
+            <li><strong>Rua C</strong> (vai do ponto 4 ao 8):</li>
+            <ul>
+                <li>Interseções com Rua A no ponto 4.</li>
+                <li>Interseções com Rua D no ponto 7.</li>
+                <li>Termina no ponto 8 (rua sem saída).</li>
+            </ul>
+            <li><strong>Rua D</strong> (vai do ponto 3 ao 7):</li>
+            <ul>
+                <li>Interseções com Rua B no ponto 3.</li>
+                <li>Interseções com Rua C no ponto 7.</li>
+            </ul>
+        </ul>
+        <p>Represente essa cidade em uma matriz 8x8, onde o valor 1 indica uma conexão direta entre os pontos e 0 indica ausência de conexão.</p>
+        <p>Dica: Considere que o ponto 1 corresponde à linha/coluna 1 da matriz, o ponto 2 à linha/coluna 2, e assim por diante.</p>
+        <p>Liste os pontos transitaveis.</p>
+    </div>
+	
+    <h2 class="section-title">Implementação Prática</h2>
+
+    <h3>Em Python</h3>
+    <div class="code">
+import numpy as np<br>
+A = np.array([[1, 2], [3, 4]])<br>
+B = np.array([[5, 6], [7, 8]])<br>
+print("Soma:", np.add(A, B))<br>
+print("Subtração:", np.subtract(A, B))<br>
+print("Transposição de A:", np.transpose(A))<br>
+print("Multiplicação:", np.dot(A, B))
+    </div>
+
+    <h3>Em MATLAB</h3>
+    <div class="code">
+A = [1 2; 3 4];<br>
+B = [5 6; 7 8];<br>
+C = A + B;<br>
+disp('Soma:'), disp(C);<br>
+D = A - B;<br>
+disp('Subtração:'), disp(D);<br>
+E = A';<br>
+disp('Transposição de A:'), disp(E);<br>
+F = A * B;<br>
+disp('Multiplicação:'), disp(F);
+    </div>
+
+</div>
+
+</body>
+</html>
